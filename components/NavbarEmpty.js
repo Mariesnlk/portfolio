@@ -18,7 +18,7 @@ export default function NavbarEmpty() {
     <div className="max-w-6xl  mx-auto px-4 py-4 md:py-10">
       <div className="flex  md:flex-row justify-between items-center">
         <div className="flex flex-col">
-          <Link href="/">
+          <Link href="/intro">
             <h1 className="font-semibold text-xl dark:text-gray-100">
               {userData.name}
             </h1>

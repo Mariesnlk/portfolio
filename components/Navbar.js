@@ -18,7 +18,7 @@ export default function Navbar() {
     <div className="max-w-6xl  mx-auto px-4 py-4 md:py-10">
       <div className="flex  md:flex-row justify-between items-center">
         <div className="flex flex-col">
-          <Link href="/">
+          <Link href="/intro">
             <h1 className="font-semibold text-xl dark:text-gray-100">
               {userData.name}
             </h1>
@@ -180,6 +180,7 @@ export default function Navbar() {
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
+              fill="currentColor"
               fill-rule="evenodd"
               clip-rule="evenodd"
               className="bi bi-cv h-5 w-5"
