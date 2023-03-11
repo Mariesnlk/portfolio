@@ -59,11 +59,19 @@ const userData = {
   ],
   about: {
     title:
-      "I am a full stack blockchain developer, passionate about building a decentralized and potentially more inclusive future.",
+      "I am a full stack blockchain developer, passionate about building a decentralized and potentially more inclusive future. Currently I am working on auditing and developing smart contracts. In free time I create my website",
     description: [
-      ``,
       `I've been coding in Solidity, Java, Javascript, Typescript, Python, Rust, Haskell, React, Node.js, MongoDB, MySQL, Bootstrap, Tailwind, C, C++, C#.`,
     ],
+    goals: [
+        "Start my Master of Informatics in TU Munich",
+        "Learn Rust and Solana",
+        "Get a German B2 certificate",
+        "Get English IELTS certificate",
+        "Participate in more hackathons than I did last year",
+    ], 
+    studies: "I am planning to study Mater in Informatics @ TU Munich",
+    books: "",
   },
   experience: [
     {
