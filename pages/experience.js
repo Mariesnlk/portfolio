@@ -1,11 +1,11 @@
 import React from "react";
 import ContainerBlock from "../components/ContainerBlock";
-import Hackathons from "../components/Hackathons";
+import Experience from "../components/Experience";
 
-export default function hackathons() {
+export default function experience() {
   return (
     <ContainerBlock title="Mariia Synelnyk - Blockchain Developer">
-      <Hackathons />
+      <Experience />
     </ContainerBlock>
   );
 }

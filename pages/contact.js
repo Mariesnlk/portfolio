@@ -1,11 +1,11 @@
 import React from "react";
 import ContainerBlock from "../components/ContainerBlock";
-import Hackathons from "../components/Hackathons";
+import Contact from "../components/Contact";
 
-export default function hackathons() {
+export default function contact() {
   return (
     <ContainerBlock title="Mariia Synelnyk - Blockchain Developer">
-      <Hackathons />
+      <Contact />
     </ContainerBlock>
   );
 }
