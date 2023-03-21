@@ -34,12 +34,12 @@ export default function FavouriteProjects() {
         </header>
 
         {/* Grid starts here */}
-        <div className="grid grid-rows-2 grid-flow-col gap-4 lg:mt-10 ml-10 mr-10 mt-15 pb-40 md:ml-10 mr-10 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:mt-10 ml-10 mr-10 mt-15 pb-40 md:ml-10 mr-10 mt-10">
           {/* Single card */}
-          <div class="col-span-2">
+          <div class="col-span-1">
             <a
               href={userData.projects[9].link}
-              className="w-full block col-span-3 sm:col-span-2 shadow-2xl"
+              className="w-full block shadow-2xl"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -47,10 +47,10 @@ export default function FavouriteProjects() {
                   alt="project1"
                   className="transform hover:scale-125 transition duration-2000 ease-out"
                 />
-                <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-2xl bg-[#F97316] rounded-md px-2">
+                <h1 className="absolute top-10 left-10 bg-[#F1F1F1] dark:bg-gray-900 text-gray-700 dark:text-gray-200 font-bold text-2xl rounded-md px-2">
                   {userData.projects[9].title}
                 </h1>
-                <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+                <h1 className="absolute bottom-10 left-10 text-gray-100 font-bold text-xl">
                   01
                 </h1>
               </div>
@@ -58,10 +58,10 @@ export default function FavouriteProjects() {
           </div>
 
           {/* Single card */}
-          <div class="col-span-2">
+          <div class="col-span-1">
             <a
               href={userData.projects[5].link}
-              className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
+              className="w-full block shadow-2xl"
             >
               <div className="relative overflow-hidden">
                 {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
@@ -70,10 +70,10 @@ export default function FavouriteProjects() {
                   alt="project2"
                   className="transform hover:scale-125 transition duration-2000 ease-out"
                 />
-                <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-2xl bg-[#F97316] rounded-md px-2">
+                <h1 className="absolute top-10 left-10 bg-[#F1F1F1] dark:bg-gray-900 text-gray-700 dark:text-gray-200 font-bold text-2xl rounded-md px-2">
                   {userData.projects[5].title}
                 </h1>
-                <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+                <h1 className="absolute bottom-10 left-10 text-gray-100 font-bold text-xl">
                   02
                 </h1>
               </div>
@@ -81,22 +81,21 @@ export default function FavouriteProjects() {
           </div>
 
           {/* Single card */}
-          <div class="flex flex-col row-span-2 justify-center">
+          <div class="col-span-1">
             <a
               href={userData.projects[1].link}
-              className="w-full block col-span-3  sm:col-span-2 shadow-2xl"
+              className="w-full block shadow-2xl"
             >
               <div className="relative overflow-hidden shadow-2xl content-center">
-                {/* <div className="overlay absolute inset-0 bg-black bg-opacity-70 z-10"></div> */}
                 <img
                   src="/pr-3.png"
                   alt="project3"
                   className="transform hover:scale-125 transition duration-2000 ease-out object-cover shadow-2xl"
                 />
-                <h1 className="absolute top-10 left-10 text-gray-50 font-bold text-2xl bg-[#F97316] rounded-md px-2">
+                <h1 className="absolute top-10 left-10 bg-[#F1F1F1] dark:bg-gray-900 text-gray-700 dark:text-gray-200 font-bold text-2xl rounded-md px-2">
                   {userData.projects[1].title}
                 </h1>
-                <h1 className="absolute bottom-10 left-10 text-gray-50 font-bold text-xl">
+                <h1 className="absolute bottom-10 left-10 text-gray-100 font-bold text-xl">
                   03
                 </h1>
               </div>
