@@ -6,29 +6,27 @@ import userData from "@constants/data";
 export default function Hero() {
   const colors = ["#FEF3C7", "#8B5CF6", "#065F46", "#3B82F6", "#F97316"];
   return (
-    <div className="flex flex-row justify-center items-start overflow-hidden">
-      
-      {/* Text container */}
-      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20 md:py-5">
-        <RoughNotationGroup show={true}>
-          <RainbowHighlight color={colors[1]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2 ">
-              Developer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[4]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Programmer.
-            </h1>
-          </RainbowHighlight>
-          <RainbowHighlight color={colors[3]}>
-            <h1 className="text-4xl md:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
-              Hacker.
-            </h1>
-          </RainbowHighlight>
-        </RoughNotationGroup>
+    <div className="flex items-start bg-[#F1F1F1] dark:bg-gray-900">
+      <div className="w-full md:w-1/2 mx-auto text-center md:text-left lg:p-20 md:py-5 md:ml-10">
+        {/* <RoughNotationGroup show={true}> */}
+        {/* <RainbowHighlight color={colors[1]}> */}
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
+          Developer.
+        </h1>
+        {/* </RainbowHighlight> */}
+        {/* <RainbowHighlight color={colors[4]}> */}
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
+          Programmer.
+        </h1>
+        {/* </RainbowHighlight> */}
+        {/* <RainbowHighlight color={colors[3]}> */}
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-gray-700 dark:text-gray-200 my-2">
+          Hacker.
+        </h1>
+        {/* </RainbowHighlight> */}
+        {/* </RoughNotationGroup> */}
       </div>
-      
+
       {/* Image container */}
       <div className="flex relative md:w-1/2 mt-20 ml-20 mr-2">
         <div className="w-3/4 ">
