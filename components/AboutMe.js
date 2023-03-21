@@ -154,7 +154,7 @@ export default function AboutMe() {
               </p>
             ))}
 
-            <h1 className="bg-red-500 text-3xl rounded-md px-2 py-1 inline-block font-bold text-gray-50">
+            <h1 className="text-3xl rounded-md px-2 py-1 inline-block font-bold bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200">
               Tech Stack
             </h1>
             <div className="flex flex-row flex-wrap mt-8">
@@ -260,6 +260,14 @@ export default function AboutMe() {
               />
               <img
                 src="https://camo.githubusercontent.com/29e7fc6c62f61f432d3852fbfa4190ff07f397ca3bde27a8196bcd5beae3ff77/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f706f7374677265732d2532333331363139322e7376673f7374796c653d666f722d7468652d6261646765266c6f676f3d706f737467726573716c266c6f676f436f6c6f723d7768697465"
+                className="h-20 w-20 mx-4 my-4"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg"
+                className="h-20 w-20 mx-4 my-4"
+              />
+              <img
+                src="https://cryptologos.cc/logos/solana-sol-logo.png"
                 className="h-20 w-20 mx-4 my-4"
               />
             </div>
