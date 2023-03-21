@@ -13,36 +13,42 @@ const userData = {
     {
       title: "Staking with different conditions",
       link: "https://github.com/Mariesnlk/staking-impl",
+      descr: "",
     },
     {
       title: "Host on Chain",
       link: "https://github.com/Mariesnlk/Host-on-chain",
-      additional:"(hackathon project)",
+      descr:"(hackathon project)",
     },
     {
       title: "Soulbound Token",
       link: "https://github.com/Mariesnlk/soulbound-token",
-      additional:"(hackathon project)",
+      descr:"(hackathon project)",
     },
     {
       title: "Compound Staking",
       link: "https://github.com/Mariesnlk/compound-staking",
+      descr: "",
     },
     {
       title: "Manual Audit Report",
       link: "https://github.com/Mariesnlk/manual-audit-report",
+      descr: "",
     },
     {
       title: "NFT Marketplace",
       link: "https://github.com/Mariesnlk/MarketPlace-NFT-Avalanche-Polygon",
+      descr: "",
     },
     {
       title: "Faculty Servlet",
       link: "https://github.com/Mariesnlk/facultyServlet",
+      descr: "",
     },
     {
       title: "Faculty Spring",
       link: "https://github.com/Mariesnlk/facultySpring",
+      descr: "",
     },
     {
       title: "Monitoring Servers",
@@ -51,10 +57,12 @@ const userData = {
     {
       title: "Countmoney",
       link: "https://github.com/Mariesnlk/Countmoney",
+      descr: "",
     },
     {
       title: "Supermarket",
       link: "https://github.com/Mariesnlk/DB_Supermarket_New",
+      descr: "",
     },
   ],
   about: {
