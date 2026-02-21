@@ -11,7 +11,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 interface NavItem {
   name: string;
@@ -25,26 +25,32 @@ interface MainNavbarProps {
 const MainNavbar = ({ navLinks }: MainNavbarProps) => {
   const pathname = usePathname();
 
-  const t = useTranslations('Navbar');
+  const t = useTranslations("Navbar");
 
   return (
     <NavigationMenu>
       <NavigationMenuList className="gap-2">
-        {navLinks.map((link) => (
-          <NavigationMenuItem key={link.name}>
-            <Link href={link.href} passHref>
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "bg-transparent hover:bg-accent/50 transition-all",
-                  pathname === link.href && "bg-accent/50 font-semibold"
-                )}
-              >
-                {t(link.name)}
+        {navLinks.map((link) => {
+          const isActive =
+            pathname === link.href || pathname === `/${link.href}`;
+
+          return (
+            <NavigationMenuItem key={link.name}>
+              <NavigationMenuLink asChild active={isActive}>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    navigationMenuTriggerStyle(),
+                    "bg-transparent transition-all",
+                    isActive && "bg-accent/50 font-semibold"
+                  )}
+                >
+                  {t(link.name)}
+                </Link>
               </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-        ))}
+            </NavigationMenuItem>
+          );
+        })}
       </NavigationMenuList>
     </NavigationMenu>
   );
