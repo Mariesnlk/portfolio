@@ -7,6 +7,8 @@
         "about": "Über mich",
         "skills": "Fähigkeiten",
         "experience": "Erfahrung",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "download_cv": "CV Herunterladen",
+        "cv_path": "/docs/cv-de.pdf"
     }
 }

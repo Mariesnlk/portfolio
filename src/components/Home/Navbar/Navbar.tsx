@@ -6,6 +6,10 @@ import MobileNavbar from "./MobileNavbar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/src/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { Link } from "@/src/i18n/routing";
+import { useTranslations } from "next-intl";
 
 export const NavLinks = [
   { name: "home", href: "/" },
@@ -16,6 +20,8 @@ export const NavLinks = [
 ];
 
 const Navbar = () => {
+  const t = useTranslations("Navbar");
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Effect to handle scroll background change
@@ -44,6 +50,19 @@ const Navbar = () => {
         </section>
 
         <section className="flex items-center justify-end gap-2 md:gap-4">
+          {/* Download CV Button - Hidden on very small screens, visible from 'sm' up */}
+          <Button
+            variant="default"
+            size="sm"
+            className="hidden sm:flex items-center gap-2 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white shadow-md transition-transform active:scale-95"
+            asChild
+          >
+            <Link href={t("cv_path")} target="_blank" prefetch={false}>
+              <Download className="size-4" />
+              <span className="font-medium">{t("download_cv")}</span>
+            </Link>
+          </Button>
+
           <aside className="hidden sm:flex items-center gap-2">
             <LanguageSwitcher />
             <ThemeToggler />
