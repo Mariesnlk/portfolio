@@ -1,5 +1,12 @@
 {
-    "HomePage" : {
-        "title": "Home"
+    "HomePage": {
+        "title": "Startseite"
+    },
+    "Navbar": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "experience": "Erfahrung",
+        "contact": "Kontakt"
     }
 }

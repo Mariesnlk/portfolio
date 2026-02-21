@@ -15,6 +15,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { useTranslations } from 'next-intl';
 
 interface NavItem {
   name: string;
@@ -29,6 +30,8 @@ const MobileNavbar = ({ navLinks }: MobileNavbarProps) => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  const t = useTranslations('Navbar');
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -39,7 +42,7 @@ const MobileNavbar = ({ navLinks }: MobileNavbarProps) => {
       </SheetTrigger>
 
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <SheetHeader className="text-left">
+        {/* <SheetHeader className="text-left">
           <SheetTitle className="flex items-center gap-2">
             <Zap className="size-5 text-primary" />
             Navigation
@@ -47,10 +50,10 @@ const MobileNavbar = ({ navLinks }: MobileNavbarProps) => {
           <SheetDescription>
             Explore my portfolio and services.
           </SheetDescription>
-        </SheetHeader>
+        </SheetHeader> */}
 
         {/* ScrollArea replaces <div> for better mobile UX */}
-        <ScrollArea className="flex-1 pr-4">
+        <ScrollArea className="flex-1 pr-4 mt-12">
           <section className="flex flex-col gap-3">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -67,7 +70,7 @@ const MobileNavbar = ({ navLinks }: MobileNavbarProps) => {
                       : "text-muted-foreground hover:bg-accent hover:text-foreground"
                   )}
                 >
-                  {link.name}
+                  {t(link.name)}
                 </Link>
               );
             })}

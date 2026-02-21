@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div className='overflow-hidden'>
             {/* <h1>{t('title')}</h1>; */}
-            Home
+            {/* Home */}
         </div>
     )
 }

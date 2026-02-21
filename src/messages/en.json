@@ -1,5 +1,12 @@
 {
-    "HomePage" : {
+    "HomePage": {
         "title": "Home"
+    },
+    "Navbar": {
+        "home": "Home",
+        "about": "About",
+        "skills": "Skills",
+        "experience": "Experience",
+        "contact": "Contact"
     }
 }

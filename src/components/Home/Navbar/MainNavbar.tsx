@@ -11,6 +11,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { useTranslations } from 'next-intl';
 
 interface NavItem {
   name: string;
@@ -23,6 +24,8 @@ interface MainNavbarProps {
 
 const MainNavbar = ({ navLinks }: MainNavbarProps) => {
   const pathname = usePathname();
+
+  const t = useTranslations('Navbar');
 
   return (
     <NavigationMenu>
@@ -37,7 +40,7 @@ const MainNavbar = ({ navLinks }: MainNavbarProps) => {
                   pathname === link.href && "bg-accent/50 font-semibold"
                 )}
               >
-                {link.name}
+                {t(link.name)}
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>

@@ -8,11 +8,11 @@ import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/src/lib/utils";
 
 export const NavLinks = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
+  { name: "home", href: "/" },
+  { name: "about", href: "#about" },
+  { name: "skills", href: "#skills" },
+  { name: "experience", href: "#experience" },
+  { name: "contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -50,7 +50,6 @@ const Navbar = () => {
           </aside>
 
           <aside className="flex items-center gap-2 md:hidden">
-            <LanguageSwitcher />
             <MobileNavbar navLinks={NavLinks} />
           </aside>
         </section>
