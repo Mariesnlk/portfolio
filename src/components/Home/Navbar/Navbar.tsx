@@ -63,13 +63,13 @@ const Navbar = () => {
             </Link>
           </Button>
 
-          <aside className="hidden sm:flex items-center gap-2">
+          <aside className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-3">
             <LanguageSwitcher />
             <ThemeToggler />
-          </aside>
 
-          <aside className="flex items-center gap-2 md:hidden">
-            <MobileNavbar navLinks={NavLinks} />
+            <div className="md:hidden">
+              <MobileNavbar navLinks={NavLinks} />
+            </div>
           </aside>
         </section>
       </nav>
