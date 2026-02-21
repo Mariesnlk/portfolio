@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Logo from "./Logo";
 import MainNavbar from "./MainNavbar";
 import MobileNavbar from "./MobileNavbar";
 import LanguageSwitcher from "./LanguageSwitcher";
-import ThemeToggler from "../../Mode/ThemeToggler";
+import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/src/lib/utils";
 
 export const NavLinks = [
@@ -36,9 +35,9 @@ const Navbar = () => {
       )}
     >
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
-        <section className="flex-shrink-0">
+        {/* <section className="flex-shrink-0">
           <Logo />
-        </section>
+        </section> */}
 
         <section className="hidden md:flex items-center justify-center flex-1">
           <MainNavbar navLinks={NavLinks} />

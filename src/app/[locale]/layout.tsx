@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/src/app/globals.css";
-import Provider from "@/src/components/Hoc/Provider";
+import Provider from "@/src/components/Providers/Provider";
 import Navbar from "@/src/components/Home/Navbar/Navbar";
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
