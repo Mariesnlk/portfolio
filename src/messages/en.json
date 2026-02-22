@@ -7,15 +7,16 @@
       "Backend Expert in Java & Spring Boot",
       "Blockchain Developer & Solidity Specialist",
       "Turning complex logic into clean code"
-    ]
+    ],
+    "download_cv": "Download CV",
+    "cv_path": "/docs/cv-en.pdf",
+    "contact_me": "Contact me"
   },
   "Navbar": {
     "home": "Home",
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
-    "contact": "Contact",
-    "download_cv": "Download CV",
-    "cv_path": "/docs/cv-en.pdf"
+    "contact": "Contact"
   }
 }

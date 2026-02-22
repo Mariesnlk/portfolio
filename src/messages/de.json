@@ -7,15 +7,16 @@
       "Backend-Experte für Java & Spring Boot",
       "Blockchain-Entwicklerin & Solidity-Spezialistin",
       "Komplexe Logik in sauberen Code verwandeln"
-    ]
+    ],
+    "download_cv": "CV Herunterladen",
+    "cv_path": "/docs/cv-de.pdf",
+    "contact_me": "Kontaktiieren Sie mich"
   },
   "Navbar": {
     "home": "Startseite",
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "experience": "Erfahrung",
-    "contact": "Kontakt",
-    "download_cv": "CV Herunterladen",
-    "cv_path": "/docs/cv-de.pdf"
+    "contact": "Kontakt"
   }
 }
