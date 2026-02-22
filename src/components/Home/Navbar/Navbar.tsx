@@ -42,25 +42,19 @@ const Navbar = () => {
           : "bg-transparent border-b border-transparent py-5"
       )}
     >
-      <nav className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-8">
-        {/* <section className="flex-shrink-0">
-          <Logo />
-        </section> */}
-
-        <section className="hidden md:flex items-center justify-center flex-1">
+      <nav className="container mx-auto flex h-16 items-center px-4 sm:px-8">
+        <div className="hidden md:flex flex-1 justify-center">
           <MainNavbar navLinks={NavLinks} />
-        </section>
+        </div>
 
-        <section className="flex items-center justify-end gap-2 md:gap-4">
-          <aside className="flex items-center gap-1 sm:gap-2 pl-2 sm:pl-3">
-            <LanguageSwitcher />
-            <ThemeToggler />
+        <div className="flex flex-1 items-center justify-end gap-2 md:gap-4">
+          <LanguageSwitcher />
+          <ThemeToggler />
 
-            <div className="md:hidden">
-              <MobileNavbar navLinks={NavLinks} />
-            </div>
-          </aside>
-        </section>
+          <div className="md:hidden">
+            <MobileNavbar navLinks={NavLinks} />
+          </div>
+        </div>
       </nav>
     </header>
   );
