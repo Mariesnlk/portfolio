@@ -1,14 +1,21 @@
 {
-    "HomePage": {
-        "title": "Home"
-    },
-    "Navbar": {
-        "home": "Home",
-        "about": "About",
-        "skills": "Skills",
-        "experience": "Experience",
-        "contact": "Contact",
-        "download_cv": "Download CV",
-        "cv_path": "/docs/cv-en.pdf"
-    }
+  "HomePage": {
+    "title": "Hi, I'm Mariia Synelnyk",
+    "status_available": "Available for opportunities",
+    "type_sequence": [
+      "Building scalable Full-stack applications",
+      "Backend Expert in Java & Spring Boot",
+      "Blockchain Developer & Solidity Specialist",
+      "Turning complex logic into clean code"
+    ]
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "download_cv": "Download CV",
+    "cv_path": "/docs/cv-en.pdf"
+  }
 }

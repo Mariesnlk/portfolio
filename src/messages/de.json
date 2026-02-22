@@ -1,14 +1,21 @@
 {
-    "HomePage": {
-        "title": "Startseite"
-    },
-    "Navbar": {
-        "home": "Startseite",
-        "about": "Über mich",
-        "skills": "Fähigkeiten",
-        "experience": "Erfahrung",
-        "contact": "Kontakt",
-        "download_cv": "CV Herunterladen",
-        "cv_path": "/docs/cv-de.pdf"
-    }
+  "HomePage": {
+    "title": "Hallo, ich bin Mariia Synelnyk",
+    "status_available": "Offen für neue Möglichkeiten",
+    "type_sequence": [
+      "Erstellung skalierbarer Full-Stack-Anwendungen",
+      "Backend-Experte für Java & Spring Boot",
+      "Blockchain-Entwicklerin & Solidity-Spezialistin",
+      "Komplexe Logik in sauberen Code verwandeln"
+    ]
+  },
+  "Navbar": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "experience": "Erfahrung",
+    "contact": "Kontakt",
+    "download_cv": "CV Herunterladen",
+    "cv_path": "/docs/cv-de.pdf"
+  }
 }

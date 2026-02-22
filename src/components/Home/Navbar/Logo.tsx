@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { CodeSquareIcon } from "lucide-react";
-import { cn } from "@/src/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;

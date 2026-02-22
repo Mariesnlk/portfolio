@@ -3,14 +3,14 @@
 import * as React from "react";
 import { Languages } from "lucide-react";
 import { useLocale } from "next-intl";
-import { useRouter, usePathname, routing } from "@/src/i18n/routing";
+import { useRouter, usePathname, routing } from "@/i18n/routing";
+import { Button } from "components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Button } from "@/components/ui/button";
+} from "components/ui/dropdown-menu";
 
 export default function LanguageSwitcher() {
   const locale = useLocale();

@@ -1,20 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, Zap } from "lucide-react";
-import { Link, usePathname } from "@/src/i18n/routing";
-import { cn } from "@/src/lib/utils";
+import { Menu } from "lucide-react";
+import { Link, usePathname } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { ScrollArea } from "@/components/ui/scroll-area";
+} from "components/ui/sheet";
+import { Button } from "components/ui/button";
+import { Separator } from "components/ui/separator";
+import { ScrollArea } from "components/ui/scroll-area";
 import { useTranslations } from 'next-intl';
 
 interface NavItem {
