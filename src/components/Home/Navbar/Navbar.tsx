@@ -6,21 +6,17 @@ import MobileNavbar from "./MobileNavbar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
 
 export const NavLinks = [
-  { name: "home", href: "/" },
-  { name: "about", href: "/about" },
-  { name: "skills", href: "/skills" },
-  { name: "experience", href: "/experience" },
-  { name: "contact", href: "/contact" },
+  { name: "home", href: "#" },
+  { name: "about", href: "#about" },
+  { name: "skills", href: "#skills" },
+  { name: "experience", href: "#experience" },
+  { name: "contact", href: "#contact" },
 ];
 
 const Navbar = () => {
-  const t = useTranslations("Navbar");
-
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [activeSection, setActiveSection] = useState("home");
 
   // Effect to handle scroll background change
   useEffect(() => {

@@ -128,13 +128,13 @@
 }
 
 @theme {
-  --background-image-home-light: radial-gradient(
+  --background-image-main-light: radial-gradient(
     circle,
     rgba(252, 252, 252, 1) 0%,
     rgba(148, 187, 233, 1) 100%
   );
   
-  --background-image-home-dark: radial-gradient(
+  --background-image-main-dark: radial-gradient(
     circle,
     rgba(45, 73, 128, 1) 0%,
     rgba(0, 0, 0, 1) 100%

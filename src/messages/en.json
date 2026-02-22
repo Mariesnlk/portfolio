@@ -18,5 +18,16 @@
     "skills": "Skills",
     "experience": "Experience",
     "contact": "Contact"
+  },
+  "About": {
+    "title": "About Me",
+    "greeting": "Hey there — thanks for stopping by! 👋",
+    "bio_p1": "I'm Mariia Synelnyk, a Full-Stack Developer with over 5 years of experience building fast, intuitive, and scalable applications. My focus lies at the intersection of robust backend logic and seamless user experiences.",
+    "bio_p2": "With a background spanning high-concurrency Java backends (Spring Boot/Hibernate) and modern React ecosystems, I've scaled products across domains like Legal Tech and E-commerce. I also spent 2 years deep-diving into Web3, developing and auditing smart contracts in Solidity and Rust for Ethereum and Solana.",
+    "bio_p3": "Currently, I'm focused on the Legal Tech space, utilizing GraphQL and Next.js to build impactful software. I believe great software is born from curiosity, clean code, and a strong product mindset—always aiming for performance, usability, and long-term maintainability.",
+    "location_munich": "Based in Munich, Germany",
+    "origin_kyiv": "From Kyiv, Ukraine",
+    "education": "Bachelor in Computer Science",
+    "work_status": "Open to work: Gewerbe or Minijob"
   }
 }
