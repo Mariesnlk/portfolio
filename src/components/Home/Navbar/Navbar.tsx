@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MainNavbar from "./MainNavbar";
 import MobileNavbar from "./MobileNavbar";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/lib/utils";
+import { useWindowScroll } from "react-use";
 
 export const NavLinks = [
-  { name: "home", href: "#" },
+  { name: "home", href: "#home" },
   { name: "about", href: "#about" },
   { name: "skills", href: "#skills" },
   { name: "experience", href: "#experience" },
@@ -16,17 +17,21 @@ export const NavLinks = [
 ];
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { y } = useWindowScroll();
+  const [activeSection, setActiveSection] = useState("home");
+  const isScrolled = y > 20;
 
-  // Effect to handle scroll background change
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((e) => e.isIntersecting);
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-50% 0px -50% 0px" } //the exact middle of the screen
+    );
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    document.querySelectorAll("section[id]").forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -40,7 +45,7 @@ const Navbar = () => {
     >
       <nav className="container mx-auto flex h-16 items-center px-4 sm:px-8">
         <div className="hidden md:flex flex-1 justify-center">
-          <MainNavbar navLinks={NavLinks} />
+          <MainNavbar navLinks={NavLinks} activeSection={activeSection} />
         </div>
 
         <div className="flex flex-1 items-center justify-end gap-2 md:gap-4">
@@ -48,7 +53,7 @@ const Navbar = () => {
           <ThemeToggler />
 
           <div className="md:hidden">
-            <MobileNavbar navLinks={NavLinks} />
+            <MobileNavbar navLinks={NavLinks} activeSection={activeSection} />
           </div>
         </div>
       </nav>

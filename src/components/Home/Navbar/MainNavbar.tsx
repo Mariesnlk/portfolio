@@ -20,9 +20,10 @@ interface NavItem {
 
 interface MainNavbarProps {
   navLinks: NavItem[];
+  activeSection: string;
 }
 
-const MainNavbar = ({ navLinks }: MainNavbarProps) => {
+const MainNavbar = ({ navLinks, activeSection }: MainNavbarProps) => {
   const pathname = usePathname();
 
   const t = useTranslations("Navbar");
@@ -31,8 +32,12 @@ const MainNavbar = ({ navLinks }: MainNavbarProps) => {
     <NavigationMenu>
       <NavigationMenuList className="gap-2">
         {navLinks.map((link) => {
+          // const isActive =
+          //   pathname === link.href || pathname === `/${link.href}`;
+
           const isActive =
-            pathname === link.href || pathname === `/${link.href}`;
+            (link.href === "#" && activeSection === "home") ||
+            link.href === `#${activeSection}`;
 
           return (
             <NavigationMenuItem key={link.name}>
@@ -40,9 +45,11 @@ const MainNavbar = ({ navLinks }: MainNavbarProps) => {
                 <Link
                   href={link.href}
                   className={cn(
-                    navigationMenuTriggerStyle(),
-                    "bg-transparent transition-all",
-                    isActive && "bg-accent/50 font-semibold"
+                    // navigationMenuTriggerStyle(),
+                    // "transition-colors duration-200",
+                    isActive
+                      ? "text-[rgb(100,150,210)] font-semibold"
+                      : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {t(link.name)}

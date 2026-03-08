@@ -29,5 +29,11 @@
     "origin_kyiv": "From Kyiv, Ukraine",
     "education": "Bachelor in Computer Science",
     "work_status": "Open to work: Gewerbe or Minijob"
+  },
+  "Skills": {
+    "title": "Skills",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Tools"
   }
 }

@@ -4,15 +4,11 @@ import React, { useState } from "react";
 import { Menu } from "lucide-react";
 import { Link, usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "components/ui/sheet";
 import { Button } from "components/ui/button";
 import { Separator } from "components/ui/separator";
 import { ScrollArea } from "components/ui/scroll-area";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 interface NavItem {
   name: string;
@@ -21,13 +17,14 @@ interface NavItem {
 
 interface MobileNavbarProps {
   navLinks: NavItem[];
+  activeSection: string;
 }
 
-const MobileNavbar = ({ navLinks }: MobileNavbarProps) => {
+const MobileNavbar = ({ navLinks, activeSection }: MobileNavbarProps) => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const t = useTranslations('Navbar');
+  const t = useTranslations("Navbar");
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -53,7 +50,11 @@ const MobileNavbar = ({ navLinks }: MobileNavbarProps) => {
         <ScrollArea className="flex-1 pr-4 mt-12">
           <section className="flex flex-col gap-3">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href;
+              // const isActive = pathname === link.href;
+
+              const isActive =
+                (link.href === "#" && activeSection === "home") ||
+                link.href === `#${activeSection}`;
 
               return (
                 <Link

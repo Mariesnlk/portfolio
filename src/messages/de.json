@@ -29,5 +29,11 @@
     "origin_kyiv": "Aus Kiew, Ukraine",
     "education": "Bachelor in Informatik",
     "work_status": "Offen für Arbeit: Gewerbe oder Minijob"
+  },
+  "Skills": {
+    "title": "Fähigkeiten",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Werkzeuge"
   }
 }
