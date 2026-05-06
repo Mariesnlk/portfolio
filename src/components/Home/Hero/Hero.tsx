@@ -9,6 +9,12 @@ import { Link } from "@/i18n/routing";
 import { Button } from "components/ui/button";
 import { Badge } from "components/ui/badge";
 import { Text } from "components/ui/text";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "components/ui/tooltip";
 import HeroAnimation from "./HeroAnimation";
 
 const SOCIAL_LINKS = [
@@ -50,20 +56,29 @@ const Hero = () => {
         <HeroAnimation sequence={sequence} />
 
         <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
-          <Button
-            variant="default"
-            className={cn(
-              "flex items-center gap-2 text-white transition-all duration-300 active:scale-95 shadow-lg px-6",
-              "bg-[rgb(148,187,233)] hover:brightness-95 shadow-blue-200/50",
-              "dark:bg-[rgb(45,73,128)] dark:hover:brightness-110 dark:shadow-black/50"
-            )}
-            asChild
-          >
-            <Link href={t("cv_path")} target="_blank" prefetch={false}>
-              <Download className="size-4" />
-              <span className="font-medium">{t("download_cv")}</span>
-            </Link>
-          </Button>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <span tabIndex={0} className="inline-flex">
+                  <Button
+                    variant="default"
+                    disabled
+                    aria-label={`${t("download_cv")} - ${t("coming_soon")}`}
+                    className={cn(
+                      "flex items-center gap-2 text-white transition-all duration-300 shadow-lg px-6",
+                      "bg-[rgb(148,187,233)] shadow-blue-200/50",
+                      "dark:bg-[rgb(45,73,128)] dark:shadow-black/50",
+                      "cursor-not-allowed"
+                    )}
+                  >
+                    <Download className="size-4" />
+                    <span className="font-medium">{t("download_cv")}</span>
+                  </Button>
+                </span>
+              </TooltipTrigger>
+              <TooltipContent>{t("coming_soon")}</TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
 
           <Button
             variant="default"

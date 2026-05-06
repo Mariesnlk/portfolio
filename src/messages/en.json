@@ -9,6 +9,7 @@
       "Turning complex logic into clean code"
     ],
     "download_cv": "Download CV",
+    "coming_soon": "Comming Soon",
     "cv_path": "/docs/cv-en.pdf",
     "contact_me": "Contact me"
   },
@@ -28,7 +29,7 @@
     "location_munich": "Based in Munich, Germany",
     "origin_kyiv": "From Kyiv, Ukraine",
     "education": "Bachelor in Computer Science",
-    "work_status": "Open to work: Gewerbe or Minijob"
+    "work_status": "Open to work full time in Germany"
   },
   "Skills": {
     "title": "Skills",
