@@ -10,13 +10,13 @@ const HeroAnimation = ({ sequence }: HeroAnimationProps) => {
   const animationSequence = sequence.flatMap((text) => [text, 2500]);
 
   return (
-    <section className="flex flex-col items-center text-center">
+    <section className="text-center">
       <TypeAnimation
         sequence={animationSequence}
         wrapper="p"
         speed={50}
         style={{ display: "block" }}
-        className="text-lg font-medium text-muted-foreground sm:text-xl mt-2"
+        className="mt-2 text-lg font-medium text-muted-foreground sm:text-xl"
         repeat={Infinity}
       />
     </section>

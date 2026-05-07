@@ -10,6 +10,7 @@ import { sharedMotion } from "@/lib/motion";
 import { Link } from "@/i18n/routing";
 import { Button } from "components/ui/button";
 import { Badge } from "components/ui/badge";
+import { Row } from "components/ui/layout";
 import { Text } from "components/ui/text";
 import {
   Tooltip,
@@ -43,12 +44,11 @@ const Hero = () => {
       className="relative flex min-h-screen items-center justify-center"
     >
       <section className="flex flex-col items-center justify-center gap-6 px-4 text-center">
-        <Badge
-          variant="outline"
-          className="inline-flex items-center gap-2 px-4 py-1.5 bg-background/50 backdrop-blur-sm"
-        >
-          <div className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-          <span>{t("status_available")}</span>
+        <Badge asChild variant="outline" className="bg-background/50 px-4 py-1.5 backdrop-blur-sm">
+          <Row className="gap-2">
+            <Row className="size-2 rounded-full bg-green-500 animate-pulse" />
+            <Text variant="small">{t("status_available")}</Text>
+          </Row>
         </Badge>
 
         <Text variant="h2" className="border-none">
@@ -57,11 +57,11 @@ const Hero = () => {
 
         <HeroAnimation sequence={sequence} />
 
-        <div className="flex flex-wrap items-center justify-center gap-3 mt-4">
+        <Row className="mt-4 flex-wrap justify-center gap-3">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <span tabIndex={0} className="inline-flex">
+                <section tabIndex={0} className="inline-flex">
                   <Button
                     variant="default"
                     disabled
@@ -74,15 +74,17 @@ const Hero = () => {
                     )}
                   >
                     <Download className="size-4" />
-                    <span className="font-medium">{t("download_cv")}</span>
+                    <Text variant="small" className="font-medium text-white">
+                      {t("download_cv")}
+                    </Text>
                   </Button>
-                </span>
+                </section>
               </TooltipTrigger>
               <TooltipContent>{t("coming_soon")}</TooltipContent>
             </Tooltip>
           </TooltipProvider>
 
-          <motion.span
+          <motion.section
             whileHover={sharedMotion.whileHover}
             whileTap={sharedMotion.whileTap}
             transition={sharedMotion.transition}
@@ -99,14 +101,16 @@ const Hero = () => {
             >
               <Link href="#contact">
                 <Mail className="size-4" />
-                <span className="font-medium">{t("contact_me")}</span>
+                <Text variant="small" className="font-medium text-white">
+                  {t("contact_me")}
+                </Text>
               </Link>
             </Button>
-          </motion.span>
+          </motion.section>
 
-          <div className="flex items-center gap-1">
+          <Row className="gap-1">
             {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
-              <motion.span
+              <motion.section
                 key={label}
                 whileHover={sharedMotion.whileHover}
                 whileTap={sharedMotion.whileTap}
@@ -123,10 +127,10 @@ const Hero = () => {
                     <Icon className="size-5" />
                   </Link>
                 </Button>
-              </motion.span>
+              </motion.section>
             ))}
-          </div>
-        </div>
+          </Row>
+        </Row>
       </section>
     </section>
   );

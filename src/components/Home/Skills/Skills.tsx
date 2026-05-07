@@ -37,27 +37,27 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-transparent">
-      <div className="container max-w-4xl mx-auto">
+    <section id="skills" className="px-4 py-20">
+      <section className="container mx-auto max-w-4xl">
 
-        <div className="flex flex-col items-center text-center mb-16 space-y-4">
-          <Text variant="h2" className="text-3xl md:text-5xl font-bold border-none">
+        <section className="mb-16 space-y-4 text-center">
+          <Text variant="h2" className="border-none text-3xl md:text-5xl">
             {t("title")}
           </Text>
-          <div className="h-1 w-20 bg-[rgb(148,187,233)] dark:bg-[rgb(45,73,128)] rounded-full" />
-        </div>
+          <section className="mx-auto h-1 w-20 rounded-full bg-[rgb(148,187,233)] dark:bg-[rgb(45,73,128)]" />
+        </section>
 
-        <div className="grid grid-cols-1 gap-12">
+        <section className="grid gap-12">
           {skillGroups.map((group, index) => (
-            <div key={index} className="space-y-6">
+            <section key={index} className="space-y-6">
               <Text 
                 variant="large" 
-                className="text-[rgb(100,150,210)] dark:text-[rgb(148,187,233)] font-bold uppercase tracking-widest text-center md:text-left"
+                className="text-center font-bold uppercase tracking-widest text-[rgb(100,150,210)] dark:text-[rgb(148,187,233)] md:text-left"
               >
                 {group.title}
               </Text>
               
-              <div className="flex flex-wrap justify-center md:justify-start gap-3">
+              <section className="flex flex-wrap justify-center gap-3 md:justify-start">
                 {group.skills.map((skill) => (
                   <motion.span
                     key={skill}
@@ -71,21 +71,20 @@ const Skills = () => {
                     <Badge
                       variant="outline"
                       className={cn(
-                        "px-4 py-1.5 text-sm font-medium transition-all duration-300",
-                        "bg-background/50 backdrop-blur-sm border-border/50",
-                        "hover:border-[rgb(148,187,233)] hover:text-[rgb(100,150,210)] dark:hover:text-white dark:hover:border-white/50",
-                        "cursor-default shadow-sm"
+                        "border-border/50 bg-background/50 px-4 py-1.5 text-sm font-medium shadow-sm backdrop-blur-sm transition-all duration-300",
+                        "hover:border-[rgb(148,187,233)] hover:text-[rgb(100,150,210)] dark:hover:border-white/50 dark:hover:text-white",
+                        "cursor-default"
                       )}
                     >
                       {skill}
                     </Badge>
                   </motion.span>
                 ))}
-              </div>
-            </div>
+              </section>
+            </section>
           ))}
-        </div>
-      </div>
+        </section>
+      </section>
     </section>
   );
 };

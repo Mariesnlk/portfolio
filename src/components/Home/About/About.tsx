@@ -3,6 +3,7 @@
 import React from "react";
 import { useTranslations } from "next-intl";
 import { Text } from "components/ui/text";
+import { Container, Row } from "components/ui/layout";
 import {
   MapPin,
   GraduationCap,
@@ -23,44 +24,43 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative flex min-h-screen flex-col items-center justify-center py-20 px-4 transition-colors duration-500"
+      className="flex min-h-screen items-center px-4 py-20"
     >
-      <div className="container max-w-4xl mx-auto">
-        <div className="flex flex-col items-center text-center mb-12 space-y-4">
-          <Text
-            variant="h2"
-            className="text-3xl md:text-5xl font-bold tracking-tight border-none"
-          >
+      <Container className="max-w-4xl">
+        <header className="mb-12 space-y-4 text-center">
+          <Text variant="h2" className="border-none text-3xl md:text-5xl">
             {t("title")}
           </Text>
-          <div className="h-1 w-20 bg-[rgb(148,187,233)] dark:bg-[rgb(45,73,128)] rounded-full" />
-        </div>
+          <Row className="mx-auto h-1 w-20 rounded-full bg-[rgb(148,187,233)] dark:bg-[rgb(45,73,128)]" />
+        </header>
 
-        <div className="space-y-6 text-center md:text-left">
-          <Text variant="lead" className="text-xl md:text-2xl font-medium text-foreground">
+        <article className="space-y-6 text-center md:text-left">
+          <Text variant="lead" className="text-xl md:text-2xl">
             {t("greeting")}
           </Text>
 
-          <div className="space-y-6 text-muted-foreground leading-relaxed">
+          <section className="space-y-6 text-muted-foreground">
             <Text variant="p" className="text-lg">{t("bio_p1")}</Text>
             <Text variant="p" className="text-lg">{t("bio_p2")}</Text>
             <Text variant="p" className="text-lg italic">{t("bio_p3")}</Text>
-          </div>
+          </section>
 
-          <div className="mt-12 pt-8 border-t border-border/50 flex flex-col items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4 w-fit">
+          <footer className="mt-12 border-t border-border/50 pt-8">
+            <section className="mx-auto grid w-fit grid-cols-1 gap-x-12 gap-y-4 sm:grid-cols-2">
               {highlights.map((item, index) => (
-                <div key={index} className="flex items-center gap-3 text-left">
-                  <div className="shrink-0">{item.icon}</div>
+                <article key={index} className="flex items-center gap-3 text-left">
+                  <Row className="shrink-0" aria-hidden="true">
+                    {item.icon}
+                  </Row>
                   <Text variant="small" className="text-muted-foreground">
                     {item.text}
                   </Text>
-                </div>
+                </article>
               ))}
-            </div>
-          </div>
-        </div>
-      </div>
+            </section>
+          </footer>
+        </article>
+      </Container>
     </section>
   );
 };
