@@ -18,7 +18,12 @@
     "about": "Über mich",
     "skills": "Fähigkeiten",
     "experience": "Erfahrung",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "open_menu": "Menü öffnen",
+    "toggle_menu": "Menü umschalten",
+    "navigation": "Navigation",
+    "select_section": "Bereich auswählen",
+    "build_version": "Build-Version"
   },
   "About": {
     "title": "Über mich",
@@ -36,5 +41,19 @@
     "backend": "Backend",
     "frontend": "Frontend",
     "tools": "Werkzeuge"
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "subtitle": "Lassen Sie uns gemeinsam etwas Sinnvolles aufbauen.",
+    "email_cta": "E-Mail senden",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "success": "Ihre Nachricht wurde erfolgreich gesendet.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "follow_me": "Folgen Sie mir"
   }
 }

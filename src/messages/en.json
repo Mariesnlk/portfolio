@@ -18,7 +18,12 @@
     "about": "About",
     "skills": "Skills",
     "experience": "Experience",
-    "contact": "Contact"
+    "contact": "Contact",
+    "open_menu": "Open menu",
+    "toggle_menu": "Toggle menu",
+    "navigation": "Navigation",
+    "select_section": "Select a section",
+    "build_version": "Build version"
   },
   "About": {
     "title": "About Me",
@@ -36,5 +41,19 @@
     "backend": "Backend",
     "frontend": "Frontend",
     "tools": "Tools"
+  },
+  "Contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's build something meaningful together.",
+    "email_cta": "Send Email",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "follow_me": "Follow me"
   }
 }

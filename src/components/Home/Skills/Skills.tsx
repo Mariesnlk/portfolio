@@ -2,7 +2,9 @@
 
 import React from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { sharedMotion } from "@/lib/motion";
 import { Badge } from "components/ui/badge";
 import { Text } from "components/ui/text";
 
@@ -57,18 +59,27 @@ const Skills = () => {
               
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
                 {group.skills.map((skill) => (
-                  <Badge
+                  <motion.span
                     key={skill}
-                    variant="outline"
-                    className={cn(
-                      "px-4 py-1.5 text-sm font-medium transition-all duration-300",
-                      "bg-background/50 backdrop-blur-sm border-border/50",
-                      "hover:border-[rgb(148,187,233)] hover:text-[rgb(100,150,210)] dark:hover:text-white dark:hover:border-white/50",
-                      "cursor-default shadow-sm"
-                    )}
+                    initial={sharedMotion.initial}
+                    animate={sharedMotion.animate}
+                    whileHover={sharedMotion.whileHover}
+                    whileTap={sharedMotion.whileTap}
+                    transition={sharedMotion.transition}
+                    className="inline-flex"
                   >
-                    {skill}
-                  </Badge>
+                    <Badge
+                      variant="outline"
+                      className={cn(
+                        "px-4 py-1.5 text-sm font-medium transition-all duration-300",
+                        "bg-background/50 backdrop-blur-sm border-border/50",
+                        "hover:border-[rgb(148,187,233)] hover:text-[rgb(100,150,210)] dark:hover:text-white dark:hover:border-white/50",
+                        "cursor-default shadow-sm"
+                      )}
+                    >
+                      {skill}
+                    </Badge>
+                  </motion.span>
                 ))}
               </div>
             </div>

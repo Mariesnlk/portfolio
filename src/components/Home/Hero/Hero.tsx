@@ -4,7 +4,9 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import { Download, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { sharedMotion } from "@/lib/motion";
 import { Link } from "@/i18n/routing";
 import { Button } from "components/ui/button";
 import { Badge } from "components/ui/badge";
@@ -80,34 +82,48 @@ const Hero = () => {
             </Tooltip>
           </TooltipProvider>
 
-          <Button
-            variant="default"
-            className={cn(
-              "flex items-center gap-2 text-white transition-all duration-300 active:scale-95 shadow-lg px-6",
-              "bg-[rgb(51,65,85)] hover:bg-[rgb(30,41,59)] shadow-[rgba(51,65,85,0.2)]",
-              "dark:bg-[rgb(39,39,42)] dark:hover:bg-[rgb(63,63,70)] dark:border dark:border-[rgb(82,82,91)] dark:shadow-[rgba(0,0,0,0.5)]"
-            )}
-            asChild
+          <motion.span
+            whileHover={sharedMotion.whileHover}
+            whileTap={sharedMotion.whileTap}
+            transition={sharedMotion.transition}
+            className="inline-flex"
           >
-            <Link href="#contact">
-              <Mail className="size-4" />
-              <span className="font-medium">{t("contact_me")}</span>
-            </Link>
-          </Button>
+            <Button
+              variant="default"
+              className={cn(
+                "flex items-center gap-2 text-white transition-all duration-300 active:scale-95 shadow-lg px-6",
+                "bg-[rgb(51,65,85)] hover:bg-[rgb(30,41,59)] shadow-[rgba(51,65,85,0.2)]",
+                "dark:bg-[rgb(39,39,42)] dark:hover:bg-[rgb(63,63,70)] dark:border dark:border-[rgb(82,82,91)] dark:shadow-[rgba(0,0,0,0.5)]"
+              )}
+              asChild
+            >
+              <Link href="#contact">
+                <Mail className="size-4" />
+                <span className="font-medium">{t("contact_me")}</span>
+              </Link>
+            </Button>
+          </motion.span>
 
           <div className="flex items-center gap-1">
             {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
-              <Button
+              <motion.span
                 key={label}
-                variant="ghost"
-                size="icon"
-                className="rounded-full hover:text-blue-600"
-                asChild
+                whileHover={sharedMotion.whileHover}
+                whileTap={sharedMotion.whileTap}
+                transition={sharedMotion.transition}
+                className="inline-flex"
               >
-                <Link href={href} target="_blank" rel="noopener noreferrer">
-                  <Icon className="size-5" />
-                </Link>
-              </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="rounded-full hover:text-blue-600"
+                  asChild
+                >
+                  <Link href={href} target="_blank" rel="noopener noreferrer">
+                    <Icon className="size-5" />
+                  </Link>
+                </Button>
+              </motion.span>
             ))}
           </div>
         </div>

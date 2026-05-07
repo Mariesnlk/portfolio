@@ -2,14 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "components/ui/navigation-menu";
 import { useTranslations } from "next-intl";
 
@@ -24,29 +22,22 @@ interface MainNavbarProps {
 }
 
 const MainNavbar = ({ navLinks, activeSection }: MainNavbarProps) => {
-  const pathname = usePathname();
-
   const t = useTranslations("Navbar");
+  const isLinkActive = (href: string) => href === `#${activeSection}`;
 
   return (
     <NavigationMenu>
       <NavigationMenuList className="gap-2">
         {navLinks.map((link) => {
-          // const isActive =
-          //   pathname === link.href || pathname === `/${link.href}`;
-
-          const isActive =
-            (link.href === "#" && activeSection === "home") ||
-            link.href === `#${activeSection}`;
+          const isActive = isLinkActive(link.href);
 
           return (
             <NavigationMenuItem key={link.name}>
               <NavigationMenuLink asChild active={isActive}>
                 <Link
                   href={link.href}
+                  aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    // navigationMenuTriggerStyle(),
-                    // "transition-colors duration-200",
                     isActive
                       ? "text-[rgb(100,150,210)] font-semibold"
                       : "text-muted-foreground hover:text-foreground"

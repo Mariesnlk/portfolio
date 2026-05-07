@@ -7,6 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/lib/utils";
 import { useWindowScroll } from "react-use";
+import { Container, Row } from "components/ui/layout";
 
 export const NavLinks = [
   { name: "home", href: "#home" },
@@ -22,16 +23,28 @@ const Navbar = () => {
   const isScrolled = y > 20;
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.find((e) => e.isIntersecting);
-        if (visible) setActiveSection(visible.target.id);
-      },
-      { rootMargin: "-50% 0px -50% 0px" } //the exact middle of the screen
-    );
+    const sections = Array.from(document.querySelectorAll<HTMLElement>("section[id]"));
+    if (!sections.length) return;
 
-    document.querySelectorAll("section[id]").forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+    const updateActiveSection = () => {
+      const viewportMiddle = window.innerHeight * 0.5;
+      const current =
+        sections.find((section) => {
+          const { top, bottom } = section.getBoundingClientRect();
+          return top <= viewportMiddle && bottom >= viewportMiddle;
+        }) ?? sections[sections.length - 1];
+
+      setActiveSection(current.id);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   return (
@@ -43,20 +56,22 @@ const Navbar = () => {
           : "bg-transparent border-b border-transparent py-5"
       )}
     >
-      <nav className="container mx-auto flex h-16 items-center px-4 sm:px-8">
-        <div className="hidden md:flex flex-1 justify-center">
-          <MainNavbar navLinks={NavLinks} activeSection={activeSection} />
-        </div>
+      <Container className="px-4 sm:px-8">
+        <Row className="h-16">
+          <aside className="hidden md:flex flex-1 justify-center">
+            <MainNavbar navLinks={NavLinks} activeSection={activeSection} />
+          </aside>
 
-        <div className="flex flex-1 items-center justify-end gap-2 md:gap-4">
-          <LanguageSwitcher />
-          <ThemeToggler />
+          <aside className="flex flex-1 items-center justify-end gap-2 md:gap-4">
+            <LanguageSwitcher />
+            <ThemeToggler />
 
-          <div className="md:hidden">
-            <MobileNavbar navLinks={NavLinks} activeSection={activeSection} />
-          </div>
-        </div>
-      </nav>
+            <aside className="md:hidden">
+              <MobileNavbar navLinks={NavLinks} activeSection={activeSection} />
+            </aside>
+          </aside>
+        </Row>
+      </Container>
     </header>
   );
 };
