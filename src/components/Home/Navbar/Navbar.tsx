@@ -7,7 +7,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggler from "../../Theme/ThemeToggler";
 import { cn } from "@/lib/utils";
 import { useWindowScroll } from "react-use";
-import { Container, Row } from "components/ui/layout";
+import { Box, Container, Header, Row } from "components/ui/layout";
 
 export const NavLinks = [
   { name: "home", href: "#home" },
@@ -48,7 +48,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header
+    <Header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300",
         isScrolled
@@ -58,21 +58,21 @@ const Navbar = () => {
     >
       <Container className="px-4 sm:px-8">
         <Row className="h-16">
-          <aside className="hidden md:flex flex-1 justify-center">
+          <Box className="hidden flex-1 justify-center md:flex">
             <MainNavbar navLinks={NavLinks} activeSection={activeSection} />
-          </aside>
+          </Box>
 
-          <aside className="flex flex-1 items-center justify-end gap-2 md:gap-4">
+          <Row className="flex-1 justify-end gap-2 md:gap-4">
             <LanguageSwitcher />
             <ThemeToggler />
 
-            <aside className="md:hidden">
+            <Box className="md:hidden">
               <MobileNavbar navLinks={NavLinks} activeSection={activeSection} />
-            </aside>
-          </aside>
+            </Box>
+          </Row>
         </Row>
       </Container>
-    </header>
+    </Header>
   );
 };
 

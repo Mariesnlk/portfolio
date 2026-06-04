@@ -1,11 +1,24 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Text } from "components/ui/text";
 import { Button } from "components/ui/button";
+import {
+  Article,
+  Fieldset,
+  Form,
+  Nav,
+  Section,
+  Stack,
+} from "components/ui/layout";
+import { Footer } from "components/ui/footer";
+import { Text } from "components/ui/text";
+import { Label } from "components/ui/label";
+import { Input } from "components/ui/input";
+import { Textarea } from "components/ui/textarea";
 import { cn } from "@/lib/utils";
 import { sharedMotion } from "@/lib/motion";
 
@@ -64,76 +77,74 @@ const Contact = () => {
   };
 
   return (
-    <section className="py-20 px-4">
-      <article className="container mx-auto max-w-3xl">
-        <header className="mb-8 space-y-4">
-          <Text
-            variant="h2"
-            className="text-3xl md:text-5xl font-bold border-none text-center"
-          >
+    <Section className="px-4 py-20">
+      <Article className="container mx-auto max-w-3xl">
+        <Stack className="mb-8 gap-4">
+          <Text variant="h2" className="border-none text-center text-3xl font-bold md:text-5xl">
             {t("title")}
           </Text>
-          <Text variant="lead" className="text-muted-foreground text-center">
+          <Text variant="lead" className="text-center">
             {t("subtitle")}
           </Text>
-        </header>
+        </Stack>
 
-        <form
+        <Form
           onSubmit={onSubmit}
           className="rounded-xl border border-border/60 bg-background/60 p-6 shadow-sm backdrop-blur-sm"
         >
-          <fieldset className="grid grid-cols-1 gap-4 sm:grid-cols-2" disabled={isSubmitting}>
-            <label className="space-y-2">
-              <Text variant="small">{t("name")}</Text>
-              <input
+          <Fieldset className="grid grid-cols-1 gap-4 sm:grid-cols-2" disabled={isSubmitting}>
+            <Stack className="gap-2">
+              <Label htmlFor="contact-name">{t("name")}</Label>
+              <Input
+                id="contact-name"
                 required
                 value={form.name}
                 onChange={onChange("name")}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
                 type="text"
                 name="name"
                 autoComplete="name"
               />
-            </label>
+            </Stack>
 
-            <label className="space-y-2">
-              <Text variant="small">{t("email")}</Text>
-              <input
+            <Stack className="gap-2">
+              <Label htmlFor="contact-email">{t("email")}</Label>
+              <Input
+                id="contact-email"
                 required
                 value={form.email}
                 onChange={onChange("email")}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
                 type="email"
                 name="email"
                 autoComplete="email"
               />
-            </label>
+            </Stack>
 
-            <label className="space-y-2 sm:col-span-2">
-              <Text variant="small">{t("subject")}</Text>
-              <input
+            <Stack className="gap-2 sm:col-span-2">
+              <Label htmlFor="contact-subject">{t("subject")}</Label>
+              <Input
+                id="contact-subject"
                 required
                 value={form.subject}
                 onChange={onChange("subject")}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
                 type="text"
                 name="subject"
               />
-            </label>
+            </Stack>
 
-            <label className="space-y-2 sm:col-span-2">
-              <Text variant="small">{t("message")}</Text>
-              <textarea
+            <Stack className="gap-2 sm:col-span-2">
+              <Label htmlFor="contact-message">{t("message")}</Label>
+              <Textarea
+                id="contact-message"
                 required
                 value={form.message}
                 onChange={onChange("message")}
-                className="min-h-36 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring/60"
+                className="min-h-36"
                 name="message"
               />
-            </label>
-          </fieldset>
+            </Stack>
+          </Fieldset>
 
-          <footer className="mt-4 flex flex-col items-center gap-3">
+          <Footer className="mt-4 flex flex-col items-center gap-3">
             <motion.span
               whileHover={isSubmitting ? undefined : sharedMotion.whileHover}
               whileTap={isSubmitting ? undefined : sharedMotion.whileTap}
@@ -165,14 +176,12 @@ const Contact = () => {
                 {feedback.text}
               </Text>
             )}
-          </footer>
-        </form>
+          </Footer>
+        </Form>
 
-        <nav aria-label="Follow me" className="mt-8 flex flex-col items-center gap-3">
-          <Text variant="large" className="text-center">
-            {t("follow_me")}
-          </Text>
-          <p className="flex items-center gap-3">
+        <Nav aria-label="Follow me" className="mt-8 flex flex-col items-center gap-3">
+          <Text variant="large" className="text-center">{t("follow_me")}</Text>
+          <Stack className="flex-row items-center gap-3">
             <motion.span
               initial={sharedMotion.initial}
               animate={sharedMotion.animate}
@@ -182,14 +191,14 @@ const Contact = () => {
               className="inline-flex"
             >
               <Button variant="outline" className="flex items-center gap-2" asChild>
-                <a
+                <Link
                   href="https://www.linkedin.com/in/mariia-synelnyk/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaLinkedin className="size-4" />
                   <strong>LinkedIn</strong>
-                </a>
+                </Link>
               </Button>
             </motion.span>
 
@@ -202,20 +211,20 @@ const Contact = () => {
               className="inline-flex"
             >
               <Button variant="outline" className="flex items-center gap-2" asChild>
-                <a
+                <Link
                   href="https://github.com/Mariesnlk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaGithub className="size-4" />
                   <strong>GitHub</strong>
-                </a>
+                </Link>
               </Button>
             </motion.span>
-          </p>
-        </nav>
-      </article>
-    </section>
+          </Stack>
+        </Nav>
+      </Article>
+    </Section>
   );
 };
 

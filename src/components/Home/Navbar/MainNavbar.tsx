@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
 } from "components/ui/navigation-menu";
 import { useTranslations } from "next-intl";
@@ -33,19 +32,18 @@ const MainNavbar = ({ navLinks, activeSection }: MainNavbarProps) => {
 
           return (
             <NavigationMenuItem key={link.name}>
-              <NavigationMenuLink asChild active={isActive}>
-                <Link
-                  href={link.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={cn(
-                    isActive
-                      ? "text-[rgb(100,150,210)] font-semibold"
-                      : "text-muted-foreground hover:text-foreground"
-                  )}
-                >
-                  {t(link.name)}
-                </Link>
-              </NavigationMenuLink>
+              <Link
+                href={link.href}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "inline-flex rounded-sm px-3 py-2 text-sm transition-colors outline-none",
+                  isActive
+                    ? "text-[rgb(100,150,210)] font-semibold"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {t(link.name)}
+              </Link>
             </NavigationMenuItem>
           );
         })}

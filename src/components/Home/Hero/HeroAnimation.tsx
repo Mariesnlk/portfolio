@@ -1,6 +1,7 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
+import { Box } from "components/ui/layout";
 
 interface HeroAnimationProps {
   sequence: string[];
@@ -10,7 +11,7 @@ const HeroAnimation = ({ sequence }: HeroAnimationProps) => {
   const animationSequence = sequence.flatMap((text) => [text, 2500]);
 
   return (
-    <section className="text-center">
+    <Box className="text-center">
       <TypeAnimation
         sequence={animationSequence}
         wrapper="p"
@@ -19,7 +20,7 @@ const HeroAnimation = ({ sequence }: HeroAnimationProps) => {
         className="mt-2 text-lg font-medium text-muted-foreground sm:text-xl"
         repeat={Infinity}
       />
-    </section>
+    </Box>
   );
 };
 

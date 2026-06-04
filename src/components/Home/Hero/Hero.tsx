@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import { Download, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -10,7 +11,7 @@ import { sharedMotion } from "@/lib/motion";
 import { Link } from "@/i18n/routing";
 import { Button } from "components/ui/button";
 import { Badge } from "components/ui/badge";
-import { Row } from "components/ui/layout";
+import { Box, Row, Section, Stack } from "components/ui/layout";
 import { Text } from "components/ui/text";
 import {
   Tooltip,
@@ -39,19 +40,16 @@ const Hero = () => {
   const sequence = t.raw("type_sequence");
 
   return (
-    <section
-      id="home"
-      className="relative flex min-h-screen items-center justify-center"
-    >
-      <section className="flex flex-col items-center justify-center gap-6 px-4 text-center">
+    <Section className="relative flex min-h-screen items-center justify-center">
+      <Stack className="items-center justify-center gap-6 px-4 text-center">
         <Badge asChild variant="outline" className="bg-background/50 px-4 py-1.5 backdrop-blur-sm">
           <Row className="gap-2">
-            <Row className="size-2 rounded-full bg-green-500 animate-pulse" />
+            <Box className="size-2 animate-pulse rounded-full bg-green-500" />
             <Text variant="small">{t("status_available")}</Text>
           </Row>
         </Badge>
 
-        <Text variant="h2" className="border-none">
+        <Text variant="h1" className="border-none text-3xl md:text-5xl">
           {t("title")}
         </Text>
 
@@ -61,7 +59,7 @@ const Hero = () => {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <section tabIndex={0} className="inline-flex">
+                <Box tabIndex={0} className="inline-flex">
                   <Button
                     variant="default"
                     disabled
@@ -74,17 +72,17 @@ const Hero = () => {
                     )}
                   >
                     <Download className="size-4" />
-                    <Text variant="small" className="font-medium text-white">
+                    <Text variant="small" className="text-white">
                       {t("download_cv")}
                     </Text>
                   </Button>
-                </section>
+                </Box>
               </TooltipTrigger>
               <TooltipContent>{t("coming_soon")}</TooltipContent>
             </Tooltip>
           </TooltipProvider>
 
-          <motion.section
+          <motion.div
             whileHover={sharedMotion.whileHover}
             whileTap={sharedMotion.whileTap}
             transition={sharedMotion.transition}
@@ -101,16 +99,16 @@ const Hero = () => {
             >
               <Link href="#contact">
                 <Mail className="size-4" />
-                <Text variant="small" className="font-medium text-white">
+                <Text variant="small" className="text-white">
                   {t("contact_me")}
                 </Text>
               </Link>
             </Button>
-          </motion.section>
+          </motion.div>
 
           <Row className="gap-1">
             {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
-              <motion.section
+              <motion.div
                 key={label}
                 whileHover={sharedMotion.whileHover}
                 whileTap={sharedMotion.whileTap}
@@ -123,16 +121,16 @@ const Hero = () => {
                   className="rounded-full hover:text-blue-600"
                   asChild
                 >
-                  <Link href={href} target="_blank" rel="noopener noreferrer">
+                  <NextLink href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
                     <Icon className="size-5" />
-                  </Link>
+                  </NextLink>
                 </Button>
-              </motion.section>
+              </motion.div>
             ))}
           </Row>
         </Row>
-      </section>
-    </section>
+      </Stack>
+    </Section>
   );
 };
 

@@ -3,26 +3,30 @@ import Hero from "./Hero/Hero";
 import About from "./About/About";
 import Skills from "./Skills/Skills";
 import Contact from "./Contact/Contact";
+import SiteFooter from "./Footer/SiteFooter";
+import { Main, Section } from "components/ui/layout";
 
 const Home = () => {
   return (
-    <div className="bg-main-light dark:bg-main-dark transition-colors duration-500 min-h-screen">
-     <section id="home">
+    <Main className="bg-main-light dark:bg-main-dark min-h-screen transition-colors duration-500">
+      <Section id="home">
         <Hero />
-      </section>
+      </Section>
 
-      <section id="about">
+      <Section id="about">
         <About />
-      </section>
+      </Section>
 
-      <section id="skills">
+      <Section id="skills">
         <Skills />
-      </section>
+      </Section>
 
-      <section id="contact">
+      <Section id="contact">
         <Contact />
-      </section>
-    </div>
+      </Section>
+
+      <SiteFooter />
+    </Main>
   );
 };
 

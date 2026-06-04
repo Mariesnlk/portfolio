@@ -16,8 +16,10 @@ import {
 import { Button } from "components/ui/button";
 import { Separator } from "components/ui/separator";
 import { ScrollArea } from "components/ui/scroll-area";
+import { Section } from "components/ui/layout";
 import { Text } from "components/ui/text";
 import { useTranslations } from "next-intl";
+import SiteFooter from "../Footer/SiteFooter";
 
 interface NavItem {
   name: string;
@@ -44,18 +46,18 @@ const MobileNavbar = ({ navLinks, activeSection }: MobileNavbarProps) => {
           aria-label={t("open_menu")}
         >
           <Menu className="size-6" />
-          <span className="sr-only">{t("toggle_menu")}</span>
+          <Text variant="srOnly">{t("toggle_menu")}</Text>
         </Button>
       </SheetTrigger>
 
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-        <SheetHeader className="px-0 pt-12">
+        <SheetHeader className="px-4 pt-12">
           <SheetTitle>{t("navigation")}</SheetTitle>
           <SheetDescription>{t("select_section")}</SheetDescription>
         </SheetHeader>
 
         <ScrollArea className="mt-2 flex-1 pr-4">
-          <section className="flex flex-col gap-3">
+          <Section className="flex flex-col gap-3">
             {navLinks.map((link) => {
               const isActive = isLinkActive(link.href);
 
@@ -76,20 +78,12 @@ const MobileNavbar = ({ navLinks, activeSection }: MobileNavbarProps) => {
                 </Link>
               );
             })}
-          </section>
+          </Section>
         </ScrollArea>
 
         <Separator />
         <SheetFooter className="p-0">
-          <Text
-            variant="small"
-            className="text-[10px] text-muted-foreground font-mono"
-          >
-            {t("build_version")}: 2026.1.0
-          </Text>
-          <Text variant="small" className="text-xs text-muted-foreground">
-            © MARIIA SYNELNYK
-          </Text>
+          <SiteFooter compact className="border-t-0" />
         </SheetFooter>
       </SheetContent>
     </Sheet>
