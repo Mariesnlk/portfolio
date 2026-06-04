@@ -81,11 +81,14 @@ const MobileNavbar = ({ navLinks, activeSection }: MobileNavbarProps) => {
 
         <Separator />
         <SheetFooter className="p-0">
-          <Text variant="small" className="text-[10px] text-muted-foreground font-mono">
+          <Text
+            variant="small"
+            className="text-[10px] text-muted-foreground font-mono"
+          >
             {t("build_version")}: 2026.1.0
           </Text>
           <Text variant="small" className="text-xs text-muted-foreground">
-            {t("copyright")}
+            © MARIIA SYNELNYK
           </Text>
         </SheetFooter>
       </SheetContent>
