@@ -14,25 +14,24 @@ const Skills = () => {
 
   const skillGroups = [
     {
-      title: t("frontend"),
+      title: t("backend"),
       skills: [
-        "TypeScript", "JavaScript", "GraphQL", "React", "Next.js", "CSS3", 
-        "Ant Design", "Chakra UI", "Chart.js", "Web3.js", "Figma"
+        "TypeScript", "Java", "JavaScript", "Python", "SQL", "Solidity", "Rust",
+        "Spring Boot", "Spring Security", "Node.js", "FastAPI", "REST APIs", "JWT",
+        "PostgreSQL", "MySQL", "MongoDB"
       ],
     },
     {
-      title: t("backend"),
+      title: t("frontend"),
       skills: [
-        "Java", "Spring", "NestJS", "Express.js", "Solidity", "Rust", "Kotlin", "Python", 
-        "Apollo GraphQL", "FastAPI", "JWT", 
-        "PostgreSQL", "MongoDB", "Prisma", "MySQL"
+        "React", "Next.js", "GraphQL", "Apollo Client", "Ant Design", "Chakra UI", "Storybook"
       ],
     },
     {
       title: t("tools"),
       skills: [
-        "AWS", "Azure", "Vercel", "Git", "NPM", "Vitest", "Jest", "Mocha", 
-        "Postman", "Apache", "Jira", "Notion", "Trello"
+        "JUnit", "Mockito", "Vitest", "Jest", "Git", "Docker", "Jenkins", "Azure",
+        "Postman", "Jira", "Grafana"
       ],
     },
   ];

@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Experience from "@/components/Home/Experience/Experience";
 
-const page = () => {
-  return (
-    <div>ExperiencePage</div>
-  )
-}
+const ExperiencePage = () => {
+  return <Experience />;
+};
 
-export default page
+export default ExperiencePage;

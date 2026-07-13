@@ -42,6 +42,80 @@
     "frontend": "Frontend",
     "tools": "Tools"
   },
+  "Experience": {
+    "title": "Experience",
+    "subtitle": "A timeline of my professional work and education.",
+    "work": "Work",
+    "education": "Education",
+    "items": [
+      {
+        "type": "work",
+        "title": "Software Engineer",
+        "organization": "Eltemate / Hogan Lovells Cadwalader technology company, Munich, Germany",
+        "period": "October 2023 to Present",
+        "details": [
+          "Led end-to-end feature delivery from stakeholder requirements to production release across frontend and backend.",
+          "Developed AI-powered LegalTech features including AI summaries, document chat, semantic search, and workflow management.",
+          "Built reusable React components with Ant Design and Storybook.",
+          "Optimized PostgreSQL queries, reducing filtered query time from 13s to 5s.",
+          "Integrated backend services, third-party APIs, M2M authentication, real-time notifications, and email workflows.",
+          "Achieved 80%+ backend test coverage with integration and unit tests.",
+          "Reduced frontend QA defects by about 80% through proactive edge-case handling.",
+          "Identified RAG and semantic search issues early, reducing feature delivery time by 30%.",
+          "Collaborated with product, AI, design, and engineering teams on architecture, documentation, and solution design.",
+          "Mentored 2 frontend developers on backend architecture and project onboarding."
+        ]
+      },
+      {
+        "type": "education",
+        "title": "Micro Master's Program: Solution Architecture",
+        "organization": "SET University, online",
+        "period": "May 2025 to July 2025"
+      },
+      {
+        "type": "education",
+        "title": "Bachelor of Software Engineering",
+        "organization": "National University Kyiv-Mohyla Academy (NaUKMA), Kyiv, Ukraine",
+        "period": "September 2018 to June 2022",
+        "meta": "Grade: 81.82 from 60 to 100; 100 is the best grade"
+      },
+      {
+        "type": "work",
+        "title": "Blockchain Developer",
+        "organization": "Applicature, remote",
+        "period": "January 2021 to January 2022",
+        "details": [
+          "Developed and deployed 20+ smart contracts across 2 blockchain networks.",
+          "Built automated smart contract tests using Hardhat, Chai, and Waffle.",
+          "Audited and supported 20+ partner blockchain projects.",
+          "Designed and implemented a cross-chain bridge for third-party integrations.",
+          "Led 2 developers, conducted code reviews, and collaborated within a team of 15+."
+        ]
+      },
+      {
+        "type": "work",
+        "title": "Junior Java Developer",
+        "organization": "FlexyChain, Kyiv, Ukraine",
+        "period": "April 2021 to September 2021",
+        "details": [
+          "Developed REST APIs and backend services using Java, Spring Boot, and SQL.",
+          "Built Telegram bots for monitoring and remotely restarting 5 backend servers, reducing downtime.",
+          "Automated backend and frontend deployments with Jenkins, streamlining the CI/CD process."
+        ]
+      },
+      {
+        "type": "work",
+        "title": "Intern Java Developer",
+        "organization": "EPAM Systems, Kyiv, Ukraine",
+        "period": "October 2020 to March 2021",
+        "details": [
+          "Developed a Java Spring Boot application with MySQL.",
+          "Implemented REST APIs, authentication, and database persistence.",
+          "Created unit tests with JUnit and Mockito."
+        ]
+      }
+    ]
+  },
   "Contact": {
     "title": "Contact Me",
     "subtitle": "Let's build something meaningful together.",

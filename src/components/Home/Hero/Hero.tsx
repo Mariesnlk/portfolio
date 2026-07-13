@@ -2,7 +2,7 @@
 
 import React from "react";
 import NextLink from "next/link";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Download, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -13,12 +13,6 @@ import { Button } from "components/ui/button";
 import { Badge } from "components/ui/badge";
 import { Box, Row, Section, Stack } from "components/ui/layout";
 import { Text } from "components/ui/text";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "components/ui/tooltip";
 import HeroAnimation from "./HeroAnimation";
 
 const SOCIAL_LINKS = [
@@ -36,8 +30,10 @@ const SOCIAL_LINKS = [
 
 const Hero = () => {
   const t = useTranslations("HomePage");
+  const locale = useLocale();
 
   const sequence = t.raw("type_sequence");
+  const cvHref = `/docs/cv-${locale}.pdf`;
 
   return (
     <Section className="relative flex min-h-screen items-center justify-center">
@@ -56,31 +52,30 @@ const Hero = () => {
         <HeroAnimation sequence={sequence} />
 
         <Row className="mt-4 flex-wrap justify-center gap-3">
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Box tabIndex={0} className="inline-flex">
-                  <Button
-                    variant="default"
-                    disabled
-                    aria-label={`${t("download_cv")} - ${t("coming_soon")}`}
-                    className={cn(
-                      "flex items-center gap-2 text-white transition-all duration-300 shadow-lg px-6",
-                      "bg-[rgb(148,187,233)] shadow-blue-200/50",
-                      "dark:bg-[rgb(45,73,128)] dark:shadow-black/50",
-                      "cursor-not-allowed"
-                    )}
-                  >
-                    <Download className="size-4" />
-                    <Text variant="small" className="text-white">
-                      {t("download_cv")}
-                    </Text>
-                  </Button>
-                </Box>
-              </TooltipTrigger>
-              <TooltipContent>{t("coming_soon")}</TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
+          <motion.section
+            whileHover={sharedMotion.whileHover}
+            whileTap={sharedMotion.whileTap}
+            transition={sharedMotion.transition}
+            className="inline-flex"
+          >
+            <Button
+              variant="default"
+              aria-label={t("download_cv")}
+              className={cn(
+                "flex items-center gap-2 text-white transition-all duration-300 active:scale-95 shadow-lg px-6",
+                "bg-[rgb(148,187,233)] hover:bg-[rgb(122,165,216)] shadow-blue-200/50",
+                "dark:bg-[rgb(45,73,128)] dark:hover:bg-[rgb(59,92,157)] dark:shadow-black/50"
+              )}
+              asChild
+            >
+              <a href={cvHref} download>
+                <Download className="size-4" />
+                <Text variant="small" className="font-medium text-white">
+                  {t("download_cv")}
+                </Text>
+              </a>
+            </Button>
+          </motion.section>
 
           <motion.div
             whileHover={sharedMotion.whileHover}
