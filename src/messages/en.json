@@ -1,0 +1,133 @@
+{
+  "HomePage": {
+    "title": "Hi, I'm Mariia Synelnyk",
+    "status_available": "Available for opportunities",
+    "type_sequence": [
+      "Building scalable Full-stack applications",
+      "Backend Expert in Java & Spring Boot",
+      "Blockchain Developer & Solidity Specialist",
+      "Turning complex logic into clean code"
+    ],
+    "download_cv": "Download CV",
+    "coming_soon": "Comming Soon",
+    "cv_path": "/docs/cv-en.pdf",
+    "contact_me": "Contact me"
+  },
+  "Navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact",
+    "open_menu": "Open menu",
+    "toggle_menu": "Toggle menu",
+    "navigation": "Navigation",
+    "select_section": "Select a section",
+    "build_version": "Build version"
+  },
+  "About": {
+    "title": "About Me",
+    "greeting": "Hey there — thanks for stopping by! 👋",
+    "bio_p1": "I'm Mariia Synelnyk, a Full-Stack Developer with over 5 years of experience building fast, intuitive, and scalable applications. My focus lies at the intersection of robust backend logic and seamless user experiences.",
+    "bio_p2": "With a background spanning high-concurrency Java backends (Spring Boot/Hibernate) and modern React ecosystems, I've scaled products across domains like Legal Tech and E-commerce. I also spent 2 years deep-diving into Web3, developing and auditing smart contracts in Solidity and Rust for Ethereum and Solana.",
+    "bio_p3": "Currently, I'm focused on the Legal Tech space, utilizing GraphQL and Next.js to build impactful software. I believe great software is born from curiosity, clean code, and a strong product mindset—always aiming for performance, usability, and long-term maintainability.",
+    "location_munich": "Based in Munich, Germany",
+    "origin_kyiv": "From Kyiv, Ukraine",
+    "education": "Bachelor in Computer Science",
+    "work_status": "Open to work full time in Germany"
+  },
+  "Skills": {
+    "title": "Skills",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Tools"
+  },
+  "Experience": {
+    "title": "Experience",
+    "subtitle": "A timeline of my professional work and education.",
+    "work": "Work",
+    "education": "Education",
+    "items": [
+      {
+        "type": "work",
+        "title": "Software Engineer",
+        "organization": "Eltemate / Hogan Lovells Cadwalader technology company, Munich, Germany",
+        "period": "October 2023 to Present",
+        "details": [
+          "Led end-to-end feature delivery from stakeholder requirements to production release across frontend and backend.",
+          "Developed AI-powered LegalTech features including AI summaries, document chat, semantic search, and workflow management.",
+          "Built reusable React components with Ant Design and Storybook.",
+          "Optimized PostgreSQL queries, reducing filtered query time from 13s to 5s.",
+          "Integrated backend services, third-party APIs, M2M authentication, real-time notifications, and email workflows.",
+          "Achieved 80%+ backend test coverage with integration and unit tests.",
+          "Reduced frontend QA defects by about 80% through proactive edge-case handling.",
+          "Identified RAG and semantic search issues early, reducing feature delivery time by 30%.",
+          "Collaborated with product, AI, design, and engineering teams on architecture, documentation, and solution design.",
+          "Mentored 2 frontend developers on backend architecture and project onboarding."
+        ]
+      },
+      {
+        "type": "education",
+        "title": "Micro Master's Program: Solution Architecture",
+        "organization": "SET University, online",
+        "period": "May 2025 to July 2025"
+      },
+      {
+        "type": "education",
+        "title": "Bachelor of Software Engineering",
+        "organization": "National University Kyiv-Mohyla Academy (NaUKMA), Kyiv, Ukraine",
+        "period": "September 2018 to June 2022",
+        "meta": "Grade: 81.82 from 60 to 100; 100 is the best grade"
+      },
+      {
+        "type": "work",
+        "title": "Blockchain Developer",
+        "organization": "Applicature, remote",
+        "period": "January 2021 to January 2022",
+        "details": [
+          "Developed and deployed 20+ smart contracts across 2 blockchain networks.",
+          "Built automated smart contract tests using Hardhat, Chai, and Waffle.",
+          "Audited and supported 20+ partner blockchain projects.",
+          "Designed and implemented a cross-chain bridge for third-party integrations.",
+          "Led 2 developers, conducted code reviews, and collaborated within a team of 15+."
+        ]
+      },
+      {
+        "type": "work",
+        "title": "Junior Java Developer",
+        "organization": "FlexyChain, Kyiv, Ukraine",
+        "period": "April 2021 to September 2021",
+        "details": [
+          "Developed REST APIs and backend services using Java, Spring Boot, and SQL.",
+          "Built Telegram bots for monitoring and remotely restarting 5 backend servers, reducing downtime.",
+          "Automated backend and frontend deployments with Jenkins, streamlining the CI/CD process."
+        ]
+      },
+      {
+        "type": "work",
+        "title": "Intern Java Developer",
+        "organization": "EPAM Systems, Kyiv, Ukraine",
+        "period": "October 2020 to March 2021",
+        "details": [
+          "Developed a Java Spring Boot application with MySQL.",
+          "Implemented REST APIs, authentication, and database persistence.",
+          "Created unit tests with JUnit and Mockito."
+        ]
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Contact Me",
+    "subtitle": "Let's build something meaningful together.",
+    "email_cta": "Send Email",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Your message has been sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "follow_me": "Follow me"
+  }
+}

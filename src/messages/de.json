@@ -1,0 +1,133 @@
+{
+  "HomePage": {
+    "title": "Hallo, ich bin Mariia Synelnyk",
+    "status_available": "Offen für neue Möglichkeiten",
+    "type_sequence": [
+      "Erstellung skalierbarer Full-Stack-Anwendungen",
+      "Backend-Experte für Java & Spring Boot",
+      "Blockchain-Entwicklerin & Solidity-Spezialistin",
+      "Komplexe Logik in sauberen Code verwandeln"
+    ],
+    "download_cv": "CV Herunterladen",
+    "coming_soon": "Kommt bald",
+    "cv_path": "/docs/cv-de.pdf",
+    "contact_me": "Kontaktiieren Sie mich"
+  },
+  "Navbar": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "experience": "Erfahrung",
+    "contact": "Kontakt",
+    "open_menu": "Menü öffnen",
+    "toggle_menu": "Menü umschalten",
+    "navigation": "Navigation",
+    "select_section": "Bereich auswählen",
+    "build_version": "Build-Version"
+  },
+  "About": {
+    "title": "Über mich",
+    "greeting": "Hallo — danke, dass Sie vorbeischauen! 👋",
+    "bio_p1": "Ich bin Mariia Synelnyk, eine Full-Stack-Entwicklerin mit über 5 Jahren Erfahrung im Aufbau schneller, intuitiver und skalierbarer Anwendungen. Mein Fokus liegt an der Schnittstelle von robuster Backend-Logik und nahtlosen Nutzererfahrungen.",
+    "bio_p2": "Mit einem Hintergrund, der von hochkonkurrierenden Java-Backends (Spring Boot/Hibernate) bis hin zu modernen React-Ökosystemen reicht, habe ich Produkte in Bereichen wie Legal Tech und E-Commerce skaliert. Außerdem habe ich 2 Jahre tief in Web3 eingetaucht und Smart Contracts in Solidity und Rust für Ethereum und Solana entwickelt und auditiert.",
+    "bio_p3": "Derzeit konzentriere ich mich auf den Legal Tech-Bereich und nutze GraphQL und Next.js, um wirkungsvolle Software zu entwickeln. Ich glaube, dass großartige Software aus Neugier, sauberem Code und einer starken Produktmentalität entsteht – immer mit dem Ziel von Performance, Benutzerfreundlichkeit und langfristiger Wartbarkeit.",
+    "location_munich": "Ansässig in München, Deutschland",
+    "origin_kyiv": "Aus Kiew, Ukraine",
+    "education": "Bachelor in Informatik",
+    "work_status": "Offen für Arbeit: Gewerbe oder Minijob"
+  },
+  "Skills": {
+    "title": "Fähigkeiten",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Werkzeuge"
+  },
+  "Experience": {
+    "title": "Erfahrung",
+    "subtitle": "Eine Timeline meiner Berufserfahrung und Ausbildung.",
+    "work": "Berufserfahrung",
+    "education": "Ausbildung",
+    "items": [
+      {
+        "type": "work",
+        "title": "Software Engineer",
+        "organization": "Eltemate / Hogan Lovells Cadwalader technology company, München, Deutschland",
+        "period": "Oktober 2023 bis heute",
+        "details": [
+          "Leitete die End-to-End-Umsetzung von Features von Stakeholder-Anforderungen bis zum Production Release über Frontend und Backend hinweg.",
+          "Entwickelte KI-gestützte LegalTech-Features, darunter KI-Zusammenfassungen, Document Chat, semantische Suche und Workflow-Management.",
+          "Erstellte wiederverwendbare React-Komponenten mit Ant Design und Storybook.",
+          "Optimierte PostgreSQL-Abfragen und reduzierte die Laufzeit gefilterter Queries von 13s auf 5s.",
+          "Integrierte Backend-Services, Drittanbieter-APIs, M2M-Authentifizierung, Echtzeit-Benachrichtigungen und E-Mail-Workflows.",
+          "Erreichte über 80% Backend-Testabdeckung mit Integrations- und Unit-Tests.",
+          "Reduzierte Frontend-QA-Defects durch proaktive Edge-Case-Behandlung um etwa 80%.",
+          "Erkannte RAG- und Semantic-Search-Probleme frühzeitig und reduzierte dadurch die Feature-Lieferzeit um 30%.",
+          "Arbeitete mit Produkt-, KI-, Design- und Engineering-Teams an Architektur, Dokumentation und Lösungsdesign.",
+          "Mentorte 2 Frontend-Entwickler beim Backend-Architekturverständnis und Projekt-Onboarding."
+        ]
+      },
+      {
+        "type": "education",
+        "title": "Micro Master's Program: Solution Architecture",
+        "organization": "SET University, online",
+        "period": "Mai 2025 bis Juli 2025"
+      },
+      {
+        "type": "education",
+        "title": "Bachelor of Software Engineering",
+        "organization": "Nationale Universität Kiew-Mohyla-Akademie (NaUKMA), Kiew, Ukraine",
+        "period": "September 2018 bis Juni 2022",
+        "meta": "Note: 81,82 von 60 bis 100; 100 ist die beste Note"
+      },
+      {
+        "type": "work",
+        "title": "Blockchain Developer",
+        "organization": "Applicature, remote",
+        "period": "Januar 2021 bis Januar 2022",
+        "details": [
+          "Entwickelte und deployte über 20 Smart Contracts auf 2 Blockchain-Netzwerken.",
+          "Erstellte automatisierte Smart-Contract-Tests mit Hardhat, Chai und Waffle.",
+          "Auditierte und unterstützte über 20 Partnerprojekte im Blockchain-Bereich.",
+          "Konzipierte und implementierte eine Cross-Chain-Bridge für Drittanbieter-Integrationen.",
+          "Leitete 2 Entwickler, führte Code Reviews durch und arbeitete in einem Team von über 15 Personen."
+        ]
+      },
+      {
+        "type": "work",
+        "title": "Junior Java Developer",
+        "organization": "FlexyChain, Kiew, Ukraine",
+        "period": "April 2021 bis September 2021",
+        "details": [
+          "Entwickelte REST APIs und Backend-Services mit Java, Spring Boot und SQL.",
+          "Erstellte Telegram-Bots zur Überwachung und zum Remote-Neustart von 5 Backend-Servern, wodurch Downtime reduziert wurde.",
+          "Automatisierte Backend- und Frontend-Deployments mit Jenkins und optimierte damit den CI/CD-Prozess."
+        ]
+      },
+      {
+        "type": "work",
+        "title": "Intern Java Developer",
+        "organization": "EPAM Systems, Kiew, Ukraine",
+        "period": "Oktober 2020 bis März 2021",
+        "details": [
+          "Entwickelte eine Java-Spring-Boot-Anwendung mit MySQL.",
+          "Implementierte REST APIs, Authentifizierung und Datenbankpersistenz.",
+          "Erstellte Unit-Tests mit JUnit und Mockito."
+        ]
+      }
+    ]
+  },
+  "Contact": {
+    "title": "Kontakt",
+    "subtitle": "Lassen Sie uns gemeinsam etwas Sinnvolles aufbauen.",
+    "email_cta": "E-Mail senden",
+    "name": "Name",
+    "email": "E-Mail",
+    "subject": "Betreff",
+    "message": "Nachricht",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "success": "Ihre Nachricht wurde erfolgreich gesendet.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "follow_me": "Folgen Sie mir"
+  }
+}
