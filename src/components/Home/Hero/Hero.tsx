@@ -38,12 +38,12 @@ const Hero = () => {
   return (
     <Section className="relative flex min-h-screen items-center justify-center">
       <Stack className="items-center justify-center gap-6 px-4 text-center">
-        <Badge asChild variant="outline" className="bg-background/50 px-4 py-1.5 backdrop-blur-sm">
+        {/* <Badge asChild variant="outline" className="bg-background/50 px-4 py-1.5 backdrop-blur-sm">
           <Row className="gap-2">
             <Box className="size-2 animate-pulse rounded-full bg-green-500" />
             <Text variant="small">{t("status_available")}</Text>
           </Row>
-        </Badge>
+        </Badge> */}
 
         <Text variant="h1" className="border-none text-3xl md:text-5xl">
           {t("title")}
@@ -51,60 +51,71 @@ const Hero = () => {
 
         <HeroAnimation sequence={sequence} />
 
-        <Row className="mt-4 flex-wrap justify-center gap-3">
-          <motion.section
-            whileHover={sharedMotion.whileHover}
-            whileTap={sharedMotion.whileTap}
-            transition={sharedMotion.transition}
-            className="inline-flex"
-          >
-            <Button
-              variant="default"
-              aria-label={t("download_cv")}
-              className={cn(
-                "flex items-center gap-2 text-white transition-all duration-300 active:scale-95 shadow-lg px-6",
-                "bg-[rgb(148,187,233)] hover:bg-[rgb(122,165,216)] shadow-blue-200/50",
-                "dark:bg-[rgb(45,73,128)] dark:hover:bg-[rgb(59,92,157)] dark:shadow-black/50"
-              )}
-              asChild
+        <Stack className="mt-4 justify-center gap-3 sm:flex-row">
+          <Row className="flex-nowrap gap-6">
+            <motion.section
+              initial={sharedMotion.initial}
+              whileInView={sharedMotion.animate}
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover={sharedMotion.whileHover}
+              whileTap={sharedMotion.whileTap}
+              transition={sharedMotion.transition}
+              className="inline-flex"
             >
-              <a href={cvHref} download>
-                <Download className="size-4" />
-                <Text variant="small" className="font-medium text-white">
-                  {t("download_cv")}
-                </Text>
-              </a>
-            </Button>
-          </motion.section>
+              <Button
+                variant="default"
+                aria-label={t("download_cv")}
+                className={cn(
+                  "flex items-center gap-1 px-2 text-white transition-all duration-300 active:scale-95 shadow-lg sm:gap-2 sm:px-6",
+                  "bg-[rgb(148,187,233)] hover:bg-[rgb(122,165,216)] shadow-blue-200/50",
+                  "dark:bg-[rgb(45,73,128)] dark:hover:bg-[rgb(59,92,157)] dark:shadow-black/50"
+                )}
+                asChild
+              >
+                <a href={cvHref} download>
+                  <Download className="size-4" />
+                  <Text variant="small" className="whitespace-nowrap text-xs font-medium text-white sm:text-sm">
+                    {t("download_cv")}
+                  </Text>
+                </a>
+              </Button>
+            </motion.section>
 
-          <motion.div
-            whileHover={sharedMotion.whileHover}
-            whileTap={sharedMotion.whileTap}
-            transition={sharedMotion.transition}
-            className="inline-flex"
-          >
-            <Button
-              variant="default"
-              className={cn(
-                "flex items-center gap-2 text-white transition-all duration-300 active:scale-95 shadow-lg px-6",
-                "bg-[rgb(51,65,85)] hover:bg-[rgb(30,41,59)] shadow-[rgba(51,65,85,0.2)]",
-                "dark:bg-[rgb(39,39,42)] dark:hover:bg-[rgb(63,63,70)] dark:border dark:border-[rgb(82,82,91)] dark:shadow-[rgba(0,0,0,0.5)]"
-              )}
-              asChild
+            <motion.div
+              initial={sharedMotion.initial}
+              whileInView={sharedMotion.animate}
+              viewport={{ once: true, amount: 0.2 }}
+              whileHover={sharedMotion.whileHover}
+              whileTap={sharedMotion.whileTap}
+              transition={sharedMotion.transition}
+              className="inline-flex"
             >
-              <Link href="#contact">
-                <Mail className="size-4" />
-                <Text variant="small" className="text-white">
-                  {t("contact_me")}
-                </Text>
-              </Link>
-            </Button>
-          </motion.div>
+              <Button
+                variant="default"
+                className={cn(
+                  "flex items-center gap-1 px-2 text-white transition-all duration-300 active:scale-95 shadow-lg sm:gap-2 sm:px-6",
+                  "bg-[rgb(51,65,85)] hover:bg-[rgb(30,41,59)] shadow-[rgba(51,65,85,0.2)]",
+                  "dark:bg-[rgb(39,39,42)] dark:hover:bg-[rgb(63,63,70)] dark:border dark:border-[rgb(82,82,91)] dark:shadow-[rgba(0,0,0,0.5)]"
+                )}
+                asChild
+              >
+                <Link href="#contact">
+                  <Mail className="size-4" />
+                  <Text variant="small" className="whitespace-nowrap text-xs text-white sm:text-sm">
+                    {t("contact_me")}
+                  </Text>
+                </Link>
+              </Button>
+            </motion.div>
+          </Row>
 
-          <Row className="gap-1">
+          <Row className="justify-center gap-1">
             {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
               <motion.div
                 key={label}
+                initial={sharedMotion.initial}
+                whileInView={sharedMotion.animate}
+                viewport={{ once: true, amount: 0.2 }}
                 whileHover={sharedMotion.whileHover}
                 whileTap={sharedMotion.whileTap}
                 transition={sharedMotion.transition}
@@ -123,7 +134,7 @@ const Hero = () => {
               </motion.div>
             ))}
           </Row>
-        </Row>
+        </Stack>
       </Stack>
     </Section>
   );

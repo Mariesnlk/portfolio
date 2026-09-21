@@ -11,7 +11,7 @@
     "download_cv": "CV Herunterladen",
     "coming_soon": "Kommt bald",
     "cv_path": "/docs/cv-de.pdf",
-    "contact_me": "Kontaktiieren Sie mich"
+    "contact_me": "Kontaktieren Sie mich"
   },
   "Navbar": {
     "home": "Startseite",
@@ -23,10 +23,13 @@
     "toggle_menu": "Menü umschalten",
     "navigation": "Navigation",
     "select_section": "Bereich auswählen",
+    "language_en": "Englisch",
+    "language_de": "Deutsch",
     "build_version": "Build-Version"
   },
   "About": {
     "title": "Über mich",
+    "photo_alt": "Porträt von Mariia Synelnyk",
     "greeting": "Hallo — danke, dass Sie vorbeischauen! 👋",
     "bio_p1": "Ich bin Mariia Synelnyk, eine Full-Stack-Entwicklerin mit über 5 Jahren Erfahrung im Aufbau schneller, intuitiver und skalierbarer Anwendungen. Mein Fokus liegt an der Schnittstelle von robuster Backend-Logik und nahtlosen Nutzererfahrungen.",
     "bio_p2": "Mit einem Hintergrund, der von hochkonkurrierenden Java-Backends (Spring Boot/Hibernate) bis hin zu modernen React-Ökosystemen reicht, habe ich Produkte in Bereichen wie Legal Tech und E-Commerce skaliert. Außerdem habe ich 2 Jahre tief in Web3 eingetaucht und Smart Contracts in Solidity und Rust für Ethereum und Solana entwickelt und auditiert.",
@@ -34,13 +37,15 @@
     "location_munich": "Ansässig in München, Deutschland",
     "origin_kyiv": "Aus Kiew, Ukraine",
     "education": "Bachelor in Informatik",
-    "work_status": "Offen für Arbeit: Gewerbe oder Minijob"
+    "work_permission": "Inhaberin einer Blauen Karte EU mit Arbeitserlaubnis in Deutschland"
   },
   "Skills": {
     "title": "Fähigkeiten",
     "backend": "Backend",
     "frontend": "Frontend",
-    "tools": "Werkzeuge"
+    "testing": "Tests",
+    "tools": "Tools & Plattformen",
+    "cloud": "Cloud-Technologien"
   },
   "Experience": {
     "title": "Erfahrung",
