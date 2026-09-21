@@ -145,7 +145,7 @@ const Experience = () => {
                   whileTap={sharedMotion.whileTap}
                 >
                   <Stack className="gap-3">
-                    <Row className="flex-wrap gap-2">
+                    <Row className="flex-col items-start gap-2 sm:flex-row sm:items-center">
                       <Badge
                         variant="outline"
                         className="border-[rgb(148,187,233)] text-[rgb(100,150,210)] dark:border-[rgb(45,73,128)] dark:text-[rgb(148,187,233)]"

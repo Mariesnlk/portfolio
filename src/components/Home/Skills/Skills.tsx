@@ -16,23 +16,30 @@ const Skills = () => {
     {
       title: t("backend"),
       skills: [
-        "TypeScript", "Java", "JavaScript", "Python", "SQL", "Solidity", "Rust",
-        "Spring Boot", "Spring Security", "Node.js", "FastAPI", "REST APIs", "JWT",
-        "PostgreSQL", "MySQL", "MongoDB"
+        "TypeScript", "JavaScript", "Node.js", "Express.js",
+        "Java", "Spring Boot", "Spring Security", "Python", "FastAPI", "REST APIs", "JWT",
+        "Solidity", "Rust",
+        "PostgreSQL", "MySQL", "MongoDB", "Prisma"
       ],
     },
     {
       title: t("frontend"),
       skills: [
-        "React", "Next.js", "GraphQL", "Apollo Client", "Ant Design", "Chakra UI", "Storybook"
+        "React", "Next.js", "React Native", "TypeScript", "JavaScript", "GraphQL", "Apollo Client", "Ant Design",
+        "Chakra UI", "Storybook", "Material UI", "TailwindCSS"
       ],
     },
     {
+      title: t("testing"),
+      skills: ["JUnit", "Mockito", "Vitest", "Jest", "Playwright", "Unit Testing", "E2E Testing"],
+    },
+        {
+      title: t("cloud"),
+      skills: ["AWS", "Azure", "Vercel", "GitHub Pages", "Docker"],
+    },
+    {
       title: t("tools"),
-      skills: [
-        "JUnit", "Mockito", "Vitest", "Jest", "Git", "Docker", "Jenkins", "Azure",
-        "Postman", "Jira", "Grafana"
-      ],
+      skills: ["Git", "Figma", "Jira", "Jenkins", "Vite", "Postman", "Grafana", "Agile/Scrum"],
     },
   ];
 
@@ -55,16 +62,17 @@ const Skills = () => {
               >
                 {group.title}
               </Text>
-              
+
               <Box className="flex flex-wrap justify-center gap-3 md:justify-start">
-                {group.skills.map((skill) => (
+                {group.skills.map((skill, skillIndex) => (
                   <motion.span
                     key={skill}
                     initial={sharedMotion.initial}
-                    animate={sharedMotion.animate}
+                    whileInView={sharedMotion.animate}
+                    viewport={{ once: true, amount: 0.2 }}
                     whileHover={sharedMotion.whileHover}
                     whileTap={sharedMotion.whileTap}
-                    transition={sharedMotion.transition}
+                    transition={{ ...sharedMotion.transition, delay: skillIndex * 0.03 }}
                     className="inline-flex"
                   >
                     <Badge

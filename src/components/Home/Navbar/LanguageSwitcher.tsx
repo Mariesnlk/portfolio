@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Languages } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { isAppLocale, routing, useRouter } from "@/i18n/routing";
 import { Button } from "components/ui/button";
@@ -16,6 +16,7 @@ import {
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
+  const t = useTranslations("Navbar");
   const router = useRouter();
   const pathname = usePathname();
 
@@ -59,7 +60,7 @@ export default function LanguageSwitcher() {
             onSelect={() => onLanguageChange(loc)}
             className={locale === loc ? "bg-accent font-bold" : ""}
           >
-            {loc.toUpperCase()}
+            {t(`language_${loc}`)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
