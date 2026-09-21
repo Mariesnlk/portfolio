@@ -43,12 +43,10 @@ export async function GET(request: Request) {
 
   const accessToken = process.env.VERCEL_ACCESS_TOKEN;
   const projectId = process.env.VERCEL_PROJECT_ID;
-  const teamId = process.env.VERCEL_TEAM_ID;
   const gmailUser = process.env.GMAIL_USER;
   const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
-  const reportEmail = process.env.ANALYTICS_REPORT_EMAIL || gmailUser;
 
-  if (!accessToken || !projectId || !gmailUser || !gmailAppPassword || !reportEmail) {
+  if (!accessToken || !projectId || !gmailUser || !gmailAppPassword) {
     return Response.json({ error: "Analytics report is not configured." }, { status: 500 });
   }
 
@@ -60,10 +58,6 @@ export async function GET(request: Request) {
     by: "country",
     limit: "20",
   });
-
-  if (teamId) {
-    params.set("teamId", teamId);
-  }
 
   const analyticsResponse = await fetch(
     `https://api.vercel.com/v1/query/web-analytics/visits/aggregate?${params}`,
@@ -100,8 +94,8 @@ export async function GET(request: Request) {
   });
 
   await transporter.sendMail({
-    from: gmailUser,
-    to: reportEmail,
+    from: `"Portfolio Analytics" <${gmailUser}>`,
+    to: gmailUser,
     subject: `Portfolio analytics: ${since} to ${until}`,
     text: [
       `Portfolio analytics for ${since} to ${until}`,
