@@ -6,6 +6,7 @@ import Navbar from "@/components/Home/Navbar/Navbar";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
+import { Analytics } from "@vercel/analytics/next";
 import { isAppLocale } from "@/i18n/routing";
 
 const geistSans = Geist({
@@ -50,6 +51,7 @@ export default async function RootLayout({
             {children}
           </Provider>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );

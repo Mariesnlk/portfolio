@@ -33,6 +33,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# deployment routes
+!src/app/api/cron/weekly-analytics/route.ts
 
 # vercel
 .vercel
